@@ -21,7 +21,7 @@ def scrape_passing
   results_div = page.css('#my-players-table div.totalResults').first.content
   number_results_arr = results_div.split(' ')
   number_results = number_results_arr[0].to_i
-  
+
   #### Finding the correct number of pages to find ####
   if number_results % 40 == 0
     num_pages = number_results/40
@@ -54,7 +54,7 @@ def scrape_rushing
   results_div = page.css('#my-players-table div.totalResults').first.content
   number_results_arr = results_div.split(' ')
   number_results = number_results_arr[0].to_i
-  
+
   #### Finding the correct number of pages to find ####
   if number_results % 40 == 0
     num_pages = number_results/40
@@ -87,7 +87,7 @@ def scrape_receiving
   results_div = page.css('#my-players-table div.totalResults').first.content
   number_results_arr = results_div.split(' ')
   number_results = number_results_arr[0].to_i
-  
+
   #### Finding the correct number of pages to find ####
   if number_results % 40 == 0
     num_pages = number_results/40
@@ -110,6 +110,6 @@ def scrape_receiving
 end
 
 
-scrape_passing 
+# scrape_passing
 scrape_rushing
-scrape_receiving
+# scrape_receiving

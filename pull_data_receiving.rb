@@ -5,17 +5,17 @@ require 'csv'
 
 #### scrapes page for all players listed, comma separated ####
 ###########################################
-####    receiving page has 12 columns    ####
-#### Last one is the array[11] element ####
+####   receiving page has 14 columns   ####
+#### Last one is the array[13] element ####
 ###########################################
 
 page = Nokogiri::HTML(open('stat_pages/receiving1.html'))
 
 CSV.open('data_hold/receiving1.csv', 'w') do |csv|
   arr = []
-  puts page.css('#my-players-table td').length  #### just tells how many table data cells there are 
+  puts page.css('#my-players-table td').length  #### just tells how many table data cells there are
 
-# #### Lists the first 40 players #### 
+# #### Lists the first 40 players ####
   page.css('#my-players-table td').each_with_index do |el, i|
     if i == page.css('#my-players-table td').length - 1
       arr.push(el.content)
@@ -39,10 +39,10 @@ CSV.open('data_hold/receiving1.csv', 'w') do |csv|
 end
 
 page2 = Nokogiri::HTML(open('stat_pages/receiving41.html'))
-
+# CSV param set to a+ for appending instead of overwriting #
 CSV.open('data_hold/receiving1.csv', 'a+') do |csv|
 arr = []
-#### Lists the next 41-80 players #### 
+#### Lists the next 41-80 players ####
   page2.css('#my-players-table td').each_with_index do |el, i|
     if i == page2.css('#my-players-table td').length - 1
       arr.push(el.content)
@@ -69,7 +69,7 @@ page3 = Nokogiri::HTML(open('stat_pages/receiving81.html'))
 
 CSV.open('data_hold/receiving1.csv', 'a+') do |csv|
 arr = []
-#### Lists the next 81-120 players #### 
+#### Lists the next 81-120 players ####
   page3.css('#my-players-table td').each_with_index do |el, i|
     if i == page3.css('#my-players-table td').length - 1
       arr.push(el.content)
@@ -96,7 +96,7 @@ page4 = Nokogiri::HTML(open('stat_pages/receiving121.html'))
 
 CSV.open('data_hold/receiving1.csv', 'a+') do |csv|
 arr = []
-#### Lists the next 121-160 players #### 
+#### Lists the next 121-160 players ####
   page4.css('#my-players-table td').each_with_index do |el, i|
     if i == page4.css('#my-players-table td').length - 1
       arr.push(el.content)
@@ -123,7 +123,7 @@ page5 = Nokogiri::HTML(open('stat_pages/receiving161.html'))
 
 CSV.open('data_hold/receiving1.csv', 'a+') do |csv|
 arr = []
-#### Lists the next 161-200 players #### 
+#### Lists the next 161-200 players ####
   page5.css('#my-players-table td').each_with_index do |el, i|
     if i == page5.css('#my-players-table td').length - 1
       arr.push(el.content)
@@ -150,7 +150,7 @@ page6 = Nokogiri::HTML(open('stat_pages/receiving201.html'))
 
 CSV.open('data_hold/receiving1.csv', 'a+') do |csv|
 arr = []
-#### Lists the next 201-240 players #### 
+#### Lists the next 201-240 players ####
   page6.css('#my-players-table td').each_with_index do |el, i|
     if i == page6.css('#my-players-table td').length - 1
       arr.push(el.content)
