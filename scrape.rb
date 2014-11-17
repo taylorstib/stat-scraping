@@ -110,6 +110,6 @@ def scrape_receiving
 end
 
 
-# scrape_passing
+scrape_passing
 scrape_rushing
-# scrape_receiving
+scrape_receiving
