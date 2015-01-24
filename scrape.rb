@@ -4,8 +4,8 @@ require 'open-uri'
 require 'fileutils'
 
 BASE_URL = 'http://espn.go.com/nfl/statistics/player/_/stat/'
-BASE_DIR = {:passing => 'passing/sort/passingYards/qualified/false/count/',
-            :rushing => 'rushing/sort/rushingYards/qualified/false/count/',
+BASE_DIR = {:passing => 'passing/sort/passingYards/seasontype/2/qualified/false/count/',
+            :rushing => 'rushing/seasontype/2/qualified/false',
             :receiving => 'receiving/sort/receivingYards/qualified/false/count/',
             :kicking => 'kicking/sort/fieldGoalsMade/qualified/false/count/'
           }
@@ -110,6 +110,6 @@ def scrape_receiving
 end
 
 
-scrape_passing
+# scrape_passing
 scrape_rushing
-scrape_receiving
+# scrape_receiving

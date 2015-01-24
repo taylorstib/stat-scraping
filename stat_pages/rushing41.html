@@ -9,7 +9,7 @@
         window.location = 'http://a.m.espn.go.com/mobilecache/general/apps/sc';
     }
 </script><script type="text/javascript">
-var espn=window.espn||{};espn.beta=(function(f,i,b){var c="http://beta.espn.go.com",j=f.location.href,l=i.location.pathname;function a(n){var r,m,o,q,s,v,w,p,t;if(n!==b){j=n;r=n.match(/http:\/\/([^\/]*)([^?]*).*/);if(r&&r.length===3){l=r[2];}}if(l.match(/\/story$/i)||l.match(/\/story\//i)){q=k("storyId",n)||k("id",n);s=k("storyPage",n)||k("page",n);if(q!==""){return c+l+"/_/id/"+q;}else{if(s!==""){return c+l+"/_/page/"+s;}else{return c+l;}}}if(l.match(/\/blogpostindex$/i)){m=k("blogname",n);if(f.espn&&espn.GLOBALS&&espn.GLOBALS.isCEBlog===true){return;}if(m!==""){return c+"/blog/"+m;}}if(l.match(/\/blogpost$/i)){m=k("blogname",n);o=k("id",n);if(f.espn&&espn.GLOBALS&&espn.GLOBALS.isCEBlog===true){return;}if(m!==""&&o!==""){return c+"/blog/"+m+"/post/_/id/"+o;}}if(l.match(/^\/blog\//i)){m=k("blogName",n);o=k("id",n);if(l.match(/\/blog\/[^\/]*?\/post$/i)){if(o!==""){return c+l+"/_/id/"+o;}}else{if(m!==""&&o!==""){return c+"/blog/"+m+"/post/_/id/"+o;}else{if(m!==""){return c+"/blog/"+m;}else{return c+l;}}}}if((l===""||l==="/")&&!j.match(/^https?:\/\/insider\.espn\.go\.com/i)){return c;}var u=l.match(/^\/.*?\/(?:index)?$/i);if(u){v={"/frontpage/":true,"/wireless/":true,"/general/":true,"/extra/":true,"/mobile/":true,"/nfl/":true,"/nba/":true,"/mlb/":true,"/nhl/":true,"/ncf/":true,"/college-football/":true,"/ncb/":true,"/mens-college-basketball/":true,"/ncw/":true,"/womenbb/":true,"/womens-basketball/":true,"/wnba/":true,"/golf/":true,"/tennis/":true,"/general/tennis/":true,"/mma/":true,"/extra/mma/":true,"/racing/":true,"/rpm/":true,"/racing/nascar/":true,"/rpm/nascar/":true,"/boxing/":true,"/extra/boxing/":true,"/college-sports/":true,"/ncaa/":true,"/extra/ncaa/":true,"/olympics/":true,"/extra/olympics/":true,"/horse-racing/":true,"/horse/":true,"/general/horse/":true,"/poker/":true,"/general/poker/":true,"/sports/endurance/":true,"/extra/endurance/":true};if(l.match(/\/index$/i)){l=l.substring(0,l.length-5);}if(v[l]===true){return c+l;}}if(l.match(/\/nflpreview$/i)||l.match(/\/preview$/i)){w=k("gameId",n);if(w!==""){if(l.match(/\/nflpreview$/i)){return c+"/nfl/preview?gameId="+w;}else{return c+l+"?gameId="+w;}}}if(l.match(/\/recap$/i)){w=k("gameId",n);if(w!==""){return c+l+"?gameId="+w;}}if(l==="/general/video"){p=k("cid",n);t=k("vid",n);if(p!==""){return c+"/video/clip?id="+p;}else{if(t!==""){return c+"/video/clip?id="+t;}}}if(l.match(/^\/(?:videohub\/video|video)\/clip$/i)){p=k("id",n);if(p!==""){return c+l+"?id="+p;}}}function h(o){var n=a(o);var m=j.match(/^https?:\/\/insider\.espn\.go\.com/i)||(o&&o.match(/^https?:\/\/insider\.espn\.go\.com/i))||(espn&&espn.GLOBALS&&espn.GLOBALS.isPremium);if(n){n=n.replace("/wireless/","/");n=n.replace("/general/","/");n=n.replace("/extra/","/");n=n.replace("/mobile/","/");n=n.replace("/frontpage/","/");n=n.replace("/videohub/","/");n=n.replace("/ncf/","/college-football/");n=n.replace("/rpm/","/racing/");n=n.replace("/ncb/","/mens-college-basketball/");n=n.replace("/ncw/","/womens-basketball/");n=n.replace("/wnba/","/womens-basketball/");n=n.replace("/ncaa/","/college-sports/");if(m){n=n.replace("/story/","/insider/story/");n=n.replace("/post/","/insider/post/");if(n.match(/\/blog\/[^_]*$/i)){if(n.charAt(n.length-1)==="/"){n=n+"insider/";}else{n=n+"/insider/";}}}}return n;}function k(o,q){var m=location.search;if(q!==b){var n=q.indexOf("?");if(n>-1){m=q.substr(n);}}o=o.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");var r=new RegExp("[\\?&]"+o+"=([^&#]*)"),p=r.exec(m);return p===null?"":decodeURIComponent(p[1].replace(/\+/g," "));}function d(){var n=e("betauser");var m=e("betacohort")||"";if(n!==null&&m.indexOf("cohort-")===0){var p=m.split("-");if(p&&p.length===2){if(parseInt(p[1],10)===999){return;}}var o=h();if(o){f.location=o;}}}function e(n){var p=n+"=";var m=i.cookie.split(";");for(var o=0;o<m.length;o++){var q=m[o];while(q.charAt(0)===" "){q=q.substring(1,q.length);}if(q.indexOf(p)===0){return q.substring(p.length,q.length);}}return null;}function g(){if(k("rand")==="beta"){espn.beta.recheck=true;}else{d();}}return{init:function(){g();}};})(this,this.document);espn.beta.init();
+var espn=window.espn||{};espn.beta=(function(f,i,b){var c="http://beta.espn.go.com",j=f.location.href,l=i.location.pathname;function a(n){var r,m,o,q,s,v,w,p,t;if(n!==b){j=n;r=n.match(/http:\/\/([^\/]*)([^?]*).*/);if(r&&r.length===3){l=r[2];}}if(l.match(/\/story$/i)||l.match(/\/story\//i)){q=k("storyId",n)||k("id",n);s=k("storyPage",n)||k("page",n);if(q!==""){return c+l+"/_/id/"+q;}else{if(s!==""){return c+l+"/_/page/"+s;}else{return c+l;}}}if(l.match(/\/blogpostindex$/i)){m=k("blogname",n);if(f.espn&&espn.GLOBALS&&espn.GLOBALS.isCEBlog===true){return;}if(m!==""){return c+"/blog/"+m;}}if(l.match(/\/blogpost$/i)){m=k("blogname",n);o=k("id",n);if(f.espn&&espn.GLOBALS&&espn.GLOBALS.isCEBlog===true){return;}if(m!==""&&o!==""){return c+"/blog/"+m+"/post/_/id/"+o;}}if(l.match(/^\/blog\//i)){m=k("blogName",n);o=k("id",n);if(l.match(/\/blog\/.*\/post$/i)){if(o!==""){return c+l+"/_/id/"+o;}}else{if(m!==""&&o!==""){return c+"/blog/"+m+"/post/_/id/"+o;}else{if(m!==""){return c+"/blog/"+m;}else{return c+l;}}}}if((l===""||l==="/")&&!j.match(/^https?:\/\/insider\.espn\.go\.com/i)){return c;}var u=l.match(/^\/.*?\/(?:index)?$/i);if(u){v={"/frontpage/":true,"/wireless/":true,"/general/":true,"/extra/":true,"/mobile/":true,"/nfl/":true,"/nba/":true,"/mlb/":true,"/nhl/":true,"/ncf/":true,"/college-football/":true,"/ncb/":true,"/mens-college-basketball/":true,"/ncw/":true,"/womenbb/":true,"/womens-basketball/":true,"/wnba/":true,"/golf/":true,"/tennis/":true,"/general/tennis/":true,"/mma/":true,"/extra/mma/":true,"/racing/":true,"/rpm/":true,"/racing/nascar/":true,"/rpm/nascar/":true,"/boxing/":true,"/extra/boxing/":true,"/college-sports/":true,"/ncaa/":true,"/extra/ncaa/":true,"/olympics/":true,"/extra/olympics/":true,"/horse-racing/":true,"/horse/":true,"/general/horse/":true,"/poker/":true,"/general/poker/":true,"/sports/endurance/":true,"/extra/endurance/":true};if(l.match(/\/index$/i)){l=l.substring(0,l.length-5);}if(v[l]===true){return c+l;}}if(l.match(/\/nflpreview$/i)||l.match(/\/preview$/i)){w=k("gameId",n);if(w!==""){if(l.match(/\/nflpreview$/i)){return c+"/nfl/preview?gameId="+w;}else{return c+l+"?gameId="+w;}}}if(l.match(/\/recap$/i)){w=k("gameId",n);if(w!==""){return c+l+"?gameId="+w;}}if(l==="/general/video"){p=k("cid",n);t=k("vid",n);if(p!==""){return c+"/video/clip?id="+p;}else{if(t!==""){return c+"/video/clip?id="+t;}}}if(l.match(/^\/(?:videohub\/video|video)\/clip$/i)){p=k("id",n);if(p!==""){return c+l+"?id="+p;}}}function h(o){var n=a(o);var m=j.match(/^https?:\/\/insider\.espn\.go\.com/i)||(o&&o.match(/^https?:\/\/insider\.espn\.go\.com/i))||(espn&&espn.GLOBALS&&espn.GLOBALS.isPremium);if(n){n=n.replace("/wireless/","/");n=n.replace("/general/","/");n=n.replace("/extra/","/");n=n.replace("/mobile/","/");n=n.replace("/frontpage/","/");n=n.replace("/videohub/","/");n=n.replace("/ncf/","/college-football/");n=n.replace("/rpm/","/racing/");n=n.replace("/ncb/","/mens-college-basketball/");n=n.replace("/ncw/","/womens-basketball/");n=n.replace("/wnba/","/womens-basketball/");n=n.replace("/ncaa/","/college-sports/");if(m){n=n.replace("/story/","/insider/story/");n=n.replace("/post/","/insider/post/");if(n.match(/\/blog\/[^_]*$/i)){if(n.charAt(n.length-1)==="/"){n=n+"insider/";}else{n=n+"/insider/";}}}}return n;}function k(o,q){var m=location.search;if(q!==b){var n=q.indexOf("?");if(n>-1){m=q.substr(n);}}o=o.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");var r=new RegExp("[\\?&]"+o+"=([^&#]*)"),p=r.exec(m);return p===null?"":decodeURIComponent(p[1].replace(/\+/g," "));}function d(){var n=e("betauser");var m=e("betacohort")||"";if(n!==null&&m.indexOf("cohort-")===0){var p=m.split("-");if(p&&p.length===2){if(parseInt(p[1],10)===999){return;}}var o=h();if(o){f.location=o;}}}function e(n){var p=n+"=";var m=i.cookie.split(";");for(var o=0;o<m.length;o++){var q=m[o];while(q.charAt(0)===" "){q=q.substring(1,q.length);}if(q.indexOf(p)===0){return q.substring(p.length,q.length);}}return null;}function g(){if(k("rand")==="beta"){espn.beta.recheck=true;}else{d();}}return{init:function(){g();}};})(this,this.document);espn.beta.init();
 </script><title>2014 NFL Player Rushing Stats - National Football League - ESPN</title>
 <meta name="google-site-verification" content="xuj1ODRluWa0frM-BjIr_aSHoUC7HB5C1MgmYAM_GkA">
 <meta name="msvalidate.01" content="B1FEB7C682C46C8FCDA3130F3D18AC28">
@@ -19,7 +19,7 @@ var espn=window.espn||{};espn.beta=(function(f,i,b){var c="http://beta.espn.go.c
 <meta name="keywords" content="nfl, national football league, pro football, 2014 nfl rushing statistics, 2014 nfl rushing stats, 2014 nfl player rushing  statistics">
 <meta property="fb:app_id" content="116656161708917">
 <meta property="og:site_name" content="ESPN.com">
-<link rel="canonical" href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/qualified/false/count/41">
+<link rel="canonical" href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/seasontype/2/qualified/false41">
 
 		<script>var _sf_startpt=(new Date()).getTime();</script>
 <link rel="search" type="application/opensearchdescription+xml" href="http://a.espncdn.com/search/opensearch.xml" title="ESPN Search">
@@ -35,7 +35,7 @@ var _vrq = _vrq || [];
 s.async = true;
 s.src = 'http://a.visualrevenue.com/vrs.js';
  x.parentNode.insertBefore(s, x);})(document, 'script'); </script>
-<script src="http://a.espncdn.com/combiner/c?js=jquery-1.7.1.js,plugins/json2.r3.js,plugins/teacrypt.js,plugins/jquery.metadata.js,plugins/jquery.bgiframe.r3.js,plugins/jquery.easing.1.3.js,plugins/jquery.hoverIntent.js,plugins/jquery.jcarousel.0.2.9.js,plugins/jquery.tinysort.r4.js,plugins/jquery.pubsub.r5.js,ui/1.8.16/jquery.ui.core.js,ui/1.8.16/jquery.ui.widget.js,ui/1.8.16/jquery.ui.tabs.js,ui/1.8.16/jquery.ui.accordion.js,plugins/ba-debug-0.4.js,espn.l10n.r12.js,swfobject/2.2/swfobject.js,flashObjWrapper.r7.js,plugins/jquery.colorbox.1.3.14.js,plugins/jquery.ba-postmessage.js,espn.core.duo.r57.js,m/beta/betacheck.r5.js,espn.mem.r39.js,stub.search.r9.js,espn.nav.mega.r38b.js,espn.storage.r6.js,espn.p13n.r19.5.js,espn.geo.r3.js,espn.video.r81.js,analytics/chartbeat/video/strategy_comprehensive.r1.js,registration/staticLogin.r12.06102014.js,espn.universal.overlay.r19.js,insider/espn.insider.20140915.js,espn.espn360.stub.r9.js,espn.myHeadlines.stub.r16.js,espn.myfaves.stub.r3.js,tsscoreboard.20090612.js,ie9pinning.r3.js,espn.f8.noauth.r3.js,espn.socialmediamod.r7.js"></script>
+<script src="http://a.espncdn.com/combiner/c?js=jquery-1.7.1.js,plugins/json2.r3.js,plugins/teacrypt.js,plugins/jquery.metadata.js,plugins/jquery.bgiframe.r3.js,plugins/jquery.easing.1.3.js,plugins/jquery.hoverIntent.js,plugins/jquery.jcarousel.0.2.9.js,plugins/jquery.tinysort.r4.js,plugins/jquery.pubsub.r5.js,ui/1.8.16/jquery.ui.core.js,ui/1.8.16/jquery.ui.widget.js,ui/1.8.16/jquery.ui.tabs.js,ui/1.8.16/jquery.ui.accordion.js,plugins/ba-debug-0.4.js,espn.l10n.r12.js,swfobject/2.2/swfobject.js,flashObjWrapper.r7.js,plugins/jquery.colorbox.1.3.14.js,plugins/jquery.ba-postmessage.js,espn.core.duo.r57.js,m/beta/betacheck.r5.js,espn.mem.r39.js,stub.search.r9.js,espn.nav.mega.r38b.js,espn.storage.r6.js,espn.p13n.r19.5.js,espn.geo.r3.js,espn.video.r81.r5.js,analytics/chartbeat/video/strategy_comprehensive.r1.js,registration/staticLogin.r12.06102014.js,espn.universal.overlay.r19.js,insider/espn.insider.20140915.js,espn.espn360.stub.r9.js,espn.myHeadlines.stub.r16.js,espn.myfaves.stub.r3.js,tsscoreboard.20090612.js,ie9pinning.r3.js,espn.f8.noauth.r3.js,espn.socialmediamod.r7.js"></script>
 <script>espn.core.navVersion = 'a';</script>
 <script>var ad_site="espn.us.com.nfl",ad_zone="nflstatisticsplayer",ad_kvps="pgtyp=nflstatisticsplayer;sp=nfl;",ad_swid="",ad_counter=1,ad_ord=Math.floor(9999999999*Math.random()),ad_seg="",ad_mnr=-1<document.cookie.indexOf("grif=1")?"t":"f",ad_ref="other",ref=document.referrer,refsMap={"facebook.com":"facebook","twitter.com|t.co":"twitter","plus.url.google.com|plus.google.com":"googleplus","google.com":"google","bing.com":"bing","yahoo.com":"yahoo","espn.go.com":"espn"},refKey;for(refKey in refsMap)ref.match(refKey)&&(ad_ref=refsMap[refKey]);
 ad_kvps=ad_kvps+"ref="+ad_ref+";mnr="+ad_mnr+";";ad_swid=jQuery.cookie("SWID");"function"===typeof espn.core.ad_segments&&(ad_seg=espn.core.ad_segments(),null!=ad_seg&&""!=ad_seg&&(ad_kvps+=ad_seg));var ad_u="";null!=ad_swid&&""!=ad_swid&&(ad_u="swid="+ad_swid+";");</script>
@@ -106,7 +106,7 @@ var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign I
 </div>
 <!-- end espn-logo -->
 <!-- begin ad -->
-<span class="presby"><!--espn.us.com.nfl sitezone-->
+<span class="presby"><!--espn.us.com.nfl sitezone--><!--http://ad.Doubleclick.net hostUrl-->
 <script>if("undefined"!=typeof ad_kvps&&"undefined"!=typeof ad_u&&"undefined"!=typeof ad_counter&&"undefined"!=typeof ad_ord){if("undefined"==typeof ad_site||"undefined"==typeof ad_zone)var ad_site="espn.us.com.nfl",ad_zone="nflstatisticsplayer";var ad_finalString="http://ad.Doubleclick.net/adj/"+ad_site+"/"+ad_zone+";"+ad_kvps+"pos=SponsoredByLogoHeader;"+ad_u+"sz=150x45,1x1;tile="+ad_counter+";ord="+ad_ord;document.write('<div data-cb-ad-id="SponsoredByLogoHeader" data-cb-dfp-id="'+ad_kvps+'sz=150x45,1x1"><script src='+ad_finalString+'>\x3c/script></div>');ad_counter++};</script>
 <noscript><a href="http://ad.Doubleclick.net/jump/espn.us.com.nfl/nflstatisticsplayer;pgtyp=nflstatisticsplayer;sp=nfl;sz=150x45,1x1;" target="_blank"><img src="http://ad.Doubleclick.net/ad/espn.us.com.nfl/nflstatisticsplayer;pgtyp=nflstatisticsplayer;sp=nfl;sz=150x45,1x1;" border="0" alt=""></a></noscript>
 </span>
@@ -129,7 +129,7 @@ var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign I
 </div>
 </div>
 <!-- end header -->
-<!--espn.us.com.nfl sitezone-->
+<!--espn.us.com.nfl sitezone--><!--http://ad.Doubleclick.net hostUrl-->
 <script>if("undefined"!=typeof ad_kvps&&"undefined"!=typeof ad_u&&"undefined"!=typeof ad_counter&&"undefined"!=typeof ad_ord){if("undefined"==typeof ad_site||"undefined"==typeof ad_zone)var ad_site="espn.us.com.nfl",ad_zone="nflstatisticsplayer";var ad_finalString="http://ad.Doubleclick.net/adj/"+ad_site+"/"+ad_zone+";"+ad_kvps+"pos=Background_Skin;"+ad_u+"sz=1280x946,200x800,1x1;tile="+ad_counter+";ord="+ad_ord;document.write('<div data-cb-ad-id="Background_Skin" data-cb-dfp-id="'+ad_kvps+'sz=1280x946,200x800,1x1"><script src='+ad_finalString+'>\x3c/script></div>');ad_counter++};</script>
 <noscript><a href="http://ad.Doubleclick.net/jump/espn.us.com.nfl/nflstatisticsplayer;pgtyp=nflstatisticsplayer;sp=nfl;sz=1280x946,200x800,1x1;" target="_blank"><img src="http://ad.Doubleclick.net/ad/espn.us.com.nfl/nflstatisticsplayer;pgtyp=nflstatisticsplayer;sp=nfl;sz=1280x946,200x800,1x1;" border="0" alt=""></a></noscript>
 <!-- begin subheader -->
@@ -139,7 +139,7 @@ var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign I
 <div id="ad-top" class="container">
 <!-- begin Banner ad -->
 <div class="span-6 ad banner top"><div class="ad-center"><div class="ad-wrapper">
-<!--espn.us.com.nfl sitezone-->
+<!--espn.us.com.nfl sitezone--><!--http://ad.Doubleclick.net hostUrl-->
 <script>if("undefined"!=typeof ad_kvps&&"undefined"!=typeof ad_u&&"undefined"!=typeof ad_counter&&"undefined"!=typeof ad_ord){if("undefined"==typeof ad_site||"undefined"==typeof ad_zone)var ad_site="espn.us.com.nfl",ad_zone="nflstatisticsplayer";var ad_finalString="http://ad.Doubleclick.net/adj/"+ad_site+"/"+ad_zone+";"+ad_kvps+"pos=Banner;"+ad_u+"sz=728x90,970x66,924x50,1x1;tile="+ad_counter+";ord="+ad_ord;document.write('<div data-cb-ad-id="Banner" data-cb-dfp-id="'+ad_kvps+'sz=728x90,970x66,924x50,1x1"><script src='+ad_finalString+'>\x3c/script></div>');ad_counter++};</script>
 <noscript><a href="http://ad.Doubleclick.net/jump/espn.us.com.nfl/nflstatisticsplayer;pgtyp=nflstatisticsplayer;sp=nfl;sz=728x90,970x66,924x50,1x1;" target="_blank"><img src="http://ad.Doubleclick.net/ad/espn.us.com.nfl/nflstatisticsplayer;pgtyp=nflstatisticsplayer;sp=nfl;sz=728x90,970x66,924x50,1x1;" border="0" alt=""></a></noscript>
 </div></div></div>
@@ -153,40 +153,41 @@ var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign I
 		<div class="mod-content">
 			<h1 class="h2">NFL Player Rushing Statistics - 2014</h1>
 			<div style="position: absolute; left: 185px; top: -3px;">
-<!--espn.us.com.nfl sitezone-->
+<!--espn.us.com.nfl sitezone--><!--http://ad.Doubleclick.net hostUrl-->
 <script>if("undefined"!=typeof ad_kvps&&"undefined"!=typeof ad_u&&"undefined"!=typeof ad_counter&&"undefined"!=typeof ad_ord){if("undefined"==typeof ad_site||"undefined"==typeof ad_zone)var ad_site="espn.us.com.nfl",ad_zone="nflstatisticsplayer";var ad_finalString="http://ad.Doubleclick.net/adj/"+ad_site+"/"+ad_zone+";"+ad_kvps+"pos=PresentedByLogo;"+ad_u+"sz=200x45,1x1;tile="+ad_counter+";ord="+ad_ord;document.write('<div data-cb-ad-id="PresentedByLogo" data-cb-dfp-id="'+ad_kvps+'sz=200x45,1x1"><script src='+ad_finalString+'>\x3c/script></div>');ad_counter++};</script>
 <noscript><a href="http://ad.Doubleclick.net/jump/espn.us.com.nfl/nflstatisticsplayer;pgtyp=nflstatisticsplayer;sp=nfl;sz=200x45,1x1;" target="_blank"><img src="http://ad.Doubleclick.net/ad/espn.us.com.nfl/nflstatisticsplayer;pgtyp=nflstatisticsplayer;sp=nfl;sz=200x45,1x1;" border="0" alt=""></a></noscript>
 </div>
 			<div class="floatleft" style="margin-right: 20px;">
-				Statistics: <a href="http://espn.go.com/nfl/statistics/player/_/stat/passing/qualified/false">Passing</a> | Rushing | <a href="http://espn.go.com/nfl/statistics/player/_/stat/receiving/qualified/false">Receiving</a> | <a href="http://espn.go.com/nfl/statistics/player/_/stat/scoring/qualified/false">Scoring</a> | <a href="http://espn.go.com/nfl/statistics/player/_/stat/returning/qualified/false">Returning</a> | <a href="http://espn.go.com/nfl/statistics/player/_/stat/kicking/qualified/false">Kicking</a> | <a href="http://espn.go.com/nfl/statistics/player/_/stat/punting/qualified/false">Punting</a> | <a href="http://espn.go.com/nfl/statistics/player/_/stat/defense/qualified/false">Defense</a><br>Season: <form class="js-goto" style="display:inline;"><select class="tablesm"><option value="#">Select One</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/qualified/false/count/41" selected>2014 Regular Season</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2013/qualified/false/count/41">2013 Regular Season</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2012/qualified/false/count/41">2012 Regular Season</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2011/qualified/false/count/41">2011 Regular Season</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2010/qualified/false/count/41">2010 Regular Season</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2009/qualified/false/count/41">2009 Regular Season</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2008/qualified/false/count/41">2008 Regular Season</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2007/qualified/false/count/41">2007 Regular Season</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2006/qualified/false/count/41">2006 Regular Season</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2005/qualified/false/count/41">2005 Regular Season</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2004/qualified/false/count/41">2004 Regular Season</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2003/qualified/false/count/41">2003 Regular Season</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2002/qualified/false/count/41">2002 Regular Season</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2013/seasontype/3/qualified/false/count/41">2013 Postseason</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2012/seasontype/3/qualified/false/count/41">2012 Postseason</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2011/seasontype/3/qualified/false/count/41">2011 Postseason</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2010/seasontype/3/qualified/false/count/41">2010 Postseason</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2009/seasontype/3/qualified/false/count/41">2009 Postseason</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2008/seasontype/3/qualified/false/count/41">2008 Postseason</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2007/seasontype/3/qualified/false/count/41">2007 Postseason</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2006/seasontype/3/qualified/false/count/41">2006 Postseason</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2005/seasontype/3/qualified/false/count/41">2005 Postseason</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2004/seasontype/3/qualified/false/count/41">2004 Postseason</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2003/seasontype/3/qualified/false/count/41">2003 Postseason</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2002/seasontype/3/qualified/false/count/41">2002 Postseason</option></select></form>
-<br>League: <form class="js-goto" style="display:inline;"><select class="tablesm"><option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/league/nfc/qualified/false/count/41">NFC</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/league/afc/qualified/false/count/41">AFC</option>
-<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/qualified/false/count/41" selected>NFL</option></select></form>
+				Statistics: <a href="http://espn.go.com/nfl/statistics/player/_/stat/passing/seasontype/2/qualified/false41">Passing</a> | Rushing | <a href="http://espn.go.com/nfl/statistics/player/_/stat/receiving/seasontype/2/qualified/false41">Receiving</a> | <a href="http://espn.go.com/nfl/statistics/player/_/stat/scoring/seasontype/2/qualified/false41">Scoring</a> | <a href="http://espn.go.com/nfl/statistics/player/_/stat/returning/seasontype/2/qualified/false41">Returning</a> | <a href="http://espn.go.com/nfl/statistics/player/_/stat/kicking/seasontype/2/qualified/false41">Kicking</a> | <a href="http://espn.go.com/nfl/statistics/player/_/stat/punting/seasontype/2/qualified/false41">Punting</a> | <a href="http://espn.go.com/nfl/statistics/player/_/stat/defense/seasontype/2/qualified/false41">Defense</a><br>Season: <form class="js-goto" style="display:inline;"><select class="tablesm"><option value="#">Select One</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/seasontype/2/qualified/false41" selected>2014 Regular Season</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2013/seasontype/2/qualified/false41">2013 Regular Season</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2012/seasontype/2/qualified/false41">2012 Regular Season</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2011/seasontype/2/qualified/false41">2011 Regular Season</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2010/seasontype/2/qualified/false41">2010 Regular Season</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2009/seasontype/2/qualified/false41">2009 Regular Season</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2008/seasontype/2/qualified/false41">2008 Regular Season</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2007/seasontype/2/qualified/false41">2007 Regular Season</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2006/seasontype/2/qualified/false41">2006 Regular Season</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2005/seasontype/2/qualified/false41">2005 Regular Season</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2004/seasontype/2/qualified/false41">2004 Regular Season</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2003/seasontype/2/qualified/false41">2003 Regular Season</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2002/seasontype/2/qualified/false41">2002 Regular Season</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/qualified/false41">2014 Postseason</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2013/qualified/false41">2013 Postseason</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2012/qualified/false41">2012 Postseason</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2011/qualified/false41">2011 Postseason</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2010/qualified/false41">2010 Postseason</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2009/qualified/false41">2009 Postseason</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2008/qualified/false41">2008 Postseason</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2007/qualified/false41">2007 Postseason</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2006/qualified/false41">2006 Postseason</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2005/qualified/false41">2005 Postseason</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2004/qualified/false41">2004 Postseason</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2003/qualified/false41">2003 Postseason</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/year/2002/qualified/false41">2002 Postseason</option></select></form>
+<br>League: <form class="js-goto" style="display:inline;"><select class="tablesm"><option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/seasontype/2/league/nfc/qualified/false41">NFC</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/seasontype/2/league/afc/qualified/false41">AFC</option>
+<option value="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/seasontype/2/qualified/false41" selected>NFL</option></select></form>
 <br>
 			</div>
 			<div class="floatright cross-links"><ul><li><a href="/nfl/qbr">NFL Total QBR »</a></li></ul></div>
@@ -205,668 +206,668 @@ var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign I
 <td align="left" style="width:20px;">RK</td>
 <td align="left">PLAYER</td>
 <td align="left">TEAM</td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingAttempts/qualified/false/count/41" title="Rushing attempts">ATT</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/qualified/false/count/41/order/false" title="Rushing yards">YDS</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/yardsPerRushAttempt/qualified/false/count/41" title="Yards per rush attempt">YDS/A</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/longRushing/qualified/false/count/41" title="Longest rush">LONG</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingBigPlays/qualified/false/count/41" title="Carries over 20 yards">20+</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingTouchdowns/qualified/false/count/41" title="Rushing touchdowns">TD</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYardsPerGame/qualified/false/count/41" title="Rushing yards per game">YDS/G</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingFumbles/qualified/false/count/41" title="Rushing fumbles">FUM</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingFirstDowns/qualified/false/count/41" title="Rushing first downs">1DN</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingAttempts/seasontype/2/qualified/false41" title="Rushing attempts">ATT</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/seasontype/2/qualified/false41/order/false" title="Rushing yards">YDS</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/yardsPerRushAttempt/seasontype/2/qualified/false41" title="Yards per rush attempt">YDS/A</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/longRushing/seasontype/2/qualified/false41" title="Longest rush">LONG</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingBigPlays/seasontype/2/qualified/false41" title="Carries over 20 yards">20+</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingTouchdowns/seasontype/2/qualified/false41" title="Rushing touchdowns">TD</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYardsPerGame/seasontype/2/qualified/false41" title="Rushing yards per game">YDS/G</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingFumbles/seasontype/2/qualified/false41" title="Rushing fumbles">FUM</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingFirstDowns/seasontype/2/qualified/false41" title="Rushing first downs">1DN</a></td>
 </tr>
-<tr class="oddrow player-28-17133" align="right">
-<td align="left">41</td>
+<tr class="oddrow player-28-14005" align="right">
+<td align="left">1</td>
 <td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/17133/isaiah-crowell">Isaiah Crowell</a>, RB</td>
-<td align="left">CLE</td>
-<td>64</td>
-<td class="sortcell">297</td>
-<td>4.6</td>
-<td>24</td>
-<td>2</td>
-<td>5</td>
-<td>33.0</td>
-<td>2</td>
-<td>18</td>
-</tr>
-<tr class="evenrow player-28-13203" align="right">
-<td align="left">42</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/13203/c.j.-spiller">C.J. Spiller</a>, RB</td>
-<td align="left">BUF</td>
-<td>69</td>
-<td class="sortcell">287</td>
-<td>4.2</td>
-<td>53</td>
-<td>3</td>
-<td>0</td>
-<td>41.0</td>
-<td>2</td>
-<td>11</td>
-</tr>
-<tr class="oddrow player-28-13212" align="right">
-<td align="left">43</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/13212/anthony-dixon">Anthony Dixon</a>, RB</td>
-<td align="left">BUF</td>
-<td>68</td>
-<td class="sortcell">278</td>
-<td>4.1</td>
-<td>47</td>
-<td>2</td>
-<td>0</td>
-<td>27.8</td>
-<td>0</td>
-<td>7</td>
-</tr>
-<tr class="evenrow player-28-14360" align="right">
-<td align="left">44</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/14360/matt-asiata">Matt Asiata</a>, RB</td>
-<td align="left">MIN</td>
-<td>84</td>
-<td class="sortcell">277</td>
-<td>3.3</td>
-<td>12</td>
-<td>0</td>
-<td>6</td>
-<td>30.8</td>
-<td>1</td>
-<td>15</td>
-</tr>
-<tr class="oddrow player-28-16784" align="right">
-<td align="left">45</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/16784/tre-mason">Tre Mason</a>, RB</td>
-<td align="left">STL</td>
-<td>63</td>
-<td class="sortcell">270</td>
-<td>4.3</td>
-<td>28</td>
-<td>3</td>
-<td>1</td>
-<td>54.0</td>
-<td>1</td>
-<td>17</td>
-</tr>
-<tr class="evenrow player-28-13213" align="right">
-<td align="left">46</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/13213/legarrette-blount">LeGarrette Blount</a>, RB</td>
-<td align="left">PIT</td>
-<td>65</td>
-<td class="sortcell">266</td>
-<td>4.1</td>
-<td>50</td>
-<td>1</td>
-<td>2</td>
-<td>26.6</td>
-<td>1</td>
-<td>16</td>
-</tr>
-<tr class="oddrow player-28-13994" align="right">
-<td align="left">47</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/13994/cam-newton">Cam Newton</a>, QB</td>
-<td align="left">CAR</td>
-<td>59</td>
-<td class="sortcell">263</td>
-<td>4.5</td>
-<td>14</td>
-<td>0</td>
-<td>2</td>
-<td>29.2</td>
-<td>2</td>
-<td>21</td>
-</tr>
-<tr class="evenrow player-28-14876" align="right">
-<td align="left">48</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/14876/ryan-tannehill">Ryan Tannehill</a>, QB</td>
-<td align="left">MIA</td>
-<td>37</td>
-<td class="sortcell">261</td>
-<td>7.1</td>
-<td>40</td>
-<td>4</td>
-<td>0</td>
-<td>26.1</td>
-<td>3</td>
-<td>14</td>
-</tr>
-<tr class="oddrow player-28-15996" align="right">
-<td align="left">49</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/15996/zac-stacy">Zac Stacy</a>, RB</td>
-<td align="left">STL</td>
-<td>66</td>
-<td class="sortcell">257</td>
-<td>3.9</td>
-<td>16</td>
-<td>0</td>
-<td>1</td>
-<td>32.1</td>
-<td>2</td>
-<td>12</td>
-</tr>
-<tr class="evenrow player-28-16950" align="right">
-<td align="left"> </td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/16950/lorenzo-taliaferro">Lorenzo Taliaferro</a>, RB</td>
-<td align="left">BAL</td>
-<td>61</td>
-<td class="sortcell">257</td>
-<td>4.2</td>
-<td>31</td>
-<td>3</td>
-<td>4</td>
-<td>25.7</td>
-<td>1</td>
-<td>16</td>
-</tr>
-<tr class="colhead" align="right">
-<td align="left" style="width:20px;">RK</td>
-<td align="left">PLAYER</td>
-<td align="left">TEAM</td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingAttempts/qualified/false/count/41" title="Rushing attempts">ATT</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/qualified/false/count/41/order/false" title="Rushing yards">YDS</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/yardsPerRushAttempt/qualified/false/count/41" title="Yards per rush attempt">YDS/A</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/longRushing/qualified/false/count/41" title="Longest rush">LONG</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingBigPlays/qualified/false/count/41" title="Carries over 20 yards">20+</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingTouchdowns/qualified/false/count/41" title="Rushing touchdowns">TD</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYardsPerGame/qualified/false/count/41" title="Rushing yards per game">YDS/G</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingFumbles/qualified/false/count/41" title="Rushing fumbles">FUM</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingFirstDowns/qualified/false/count/41" title="Rushing first downs">1DN</a></td>
-</tr>
-<tr class="oddrow player-28-10195" align="right">
-<td align="left">51</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/10195/fred-jackson">Fred Jackson</a>, RB</td>
-<td align="left">BUF</td>
-<td>58</td>
-<td class="sortcell">249</td>
-<td>4.3</td>
-<td>38</td>
-<td>1</td>
-<td>1</td>
-<td>31.1</td>
-<td>0</td>
-<td>11</td>
-</tr>
-<tr class="evenrow player-28-8544" align="right">
-<td align="left">52</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/8544/darren-sproles">Darren Sproles</a>, RB</td>
-<td align="left">PHI</td>
-<td>36</td>
-<td class="sortcell">236</td>
-<td>6.6</td>
-<td>49</td>
-<td>2</td>
-<td>4</td>
-<td>29.5</td>
-<td>2</td>
-<td>11</td>
-</tr>
-<tr class="oddrow player-28-16921" align="right">
-<td align="left">53</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/16921/alfred-blue">Alfred Blue</a>, RB</td>
-<td align="left">HOU</td>
-<td>68</td>
-<td class="sortcell">234</td>
-<td>3.4</td>
-<td>46</td>
-<td>1</td>
-<td>0</td>
-<td>26.0</td>
-<td>0</td>
-<td>10</td>
-</tr>
-<tr class="evenrow player-28-14891" align="right">
-<td align="left">54</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/14891/bernard-pierce">Bernard Pierce</a>, RB</td>
-<td align="left">BAL</td>
-<td>64</td>
-<td class="sortcell">229</td>
-<td>3.6</td>
-<td>17</td>
-<td>0</td>
-<td>2</td>
-<td>32.7</td>
-<td>1</td>
-<td>15</td>
-</tr>
-<tr class="oddrow player-28-16777" align="right">
-<td align="left">55</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/16777/carlos-hyde">Carlos Hyde</a>, RB</td>
-<td align="left">SF</td>
-<td>54</td>
-<td class="sortcell">214</td>
-<td>4.0</td>
-<td>15</td>
-<td>0</td>
-<td>3</td>
-<td>23.8</td>
-<td>0</td>
-<td>11</td>
-</tr>
-<tr class="evenrow player-28-16724" align="right">
-<td align="left">56</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/16724/blake-bortles">Blake Bortles</a>, QB</td>
-<td align="left">JAX</td>
-<td>34</td>
-<td class="sortcell">204</td>
-<td>6.0</td>
-<td>32</td>
-<td>2</td>
-<td>0</td>
-<td>25.5</td>
-<td>3</td>
-<td>15</td>
-</tr>
-<tr class="oddrow player-28-13214" align="right">
-<td align="left">57</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/13214/james-starks">James Starks</a>, RB</td>
-<td align="left">GB</td>
-<td>49</td>
-<td class="sortcell">203</td>
-<td>4.1</td>
-<td>17</td>
-<td>0</td>
-<td>1</td>
-<td>22.6</td>
-<td>0</td>
-<td>10</td>
-</tr>
-<tr class="evenrow player-28-16013" align="right">
-<td align="left">58</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/16013/joseph-randle">Joseph Randle</a>, RB</td>
+<a href="http://espn.go.com/nfl/player/_/id/14005/demarco-murray">DeMarco Murray</a>, RB</td>
 <td align="left">DAL</td>
-<td>29</td>
-<td class="sortcell">201</td>
-<td>6.9</td>
-<td>40</td>
-<td>2</td>
-<td>1</td>
-<td>20.1</td>
-<td>1</td>
-<td>7</td>
+<td>392</td>
+<td class="sortcell">1,845</td>
+<td>4.7</td>
+<td>51</td>
+<td>15</td>
+<td>13</td>
+<td>115.3</td>
+<td>3</td>
+<td>85</td>
 </tr>
-<tr class="oddrow player-28-12500" align="right">
-<td align="left">59</td>
+<tr class="evenrow player-28-15825" align="right">
+<td align="left">2</td>
 <td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/12500/shonn-greene">Shonn Greene</a>, RB</td>
-<td align="left">TEN</td>
-<td>49</td>
-<td class="sortcell">199</td>
-<td>4.1</td>
-<td>20</td>
-<td>1</td>
-<td>1</td>
-<td>28.4</td>
-<td>1</td>
-<td>9</td>
-</tr>
-<tr class="evenrow player-28-9588" align="right">
-<td align="left">60</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/9588/reggie-bush">Reggie Bush</a>, RB</td>
-<td align="left">DET</td>
-<td>53</td>
-<td class="sortcell">191</td>
-<td>3.6</td>
-<td>26</td>
-<td>1</td>
-<td>1</td>
-<td>27.3</td>
+<a href="http://espn.go.com/nfl/player/_/id/15825/le'veon-bell">Le'Veon Bell</a>, RB</td>
+<td align="left">PIT</td>
+<td>290</td>
+<td class="sortcell">1,361</td>
+<td>4.7</td>
+<td>81</td>
+<td>8</td>
+<td>8</td>
+<td>85.1</td>
 <td>0</td>
+<td>73</td>
+</tr>
+<tr class="oddrow player-28-12514" align="right">
+<td align="left">3</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/12514/lesean-mccoy">LeSean McCoy</a>, RB</td>
+<td align="left">PHI</td>
+<td>312</td>
+<td class="sortcell">1,319</td>
+<td>4.2</td>
+<td>53</td>
+<td>9</td>
+<td>5</td>
+<td>82.4</td>
+<td>3</td>
+<td>67</td>
+</tr>
+<tr class="evenrow player-28-10456" align="right">
+<td align="left">4</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/10456/marshawn-lynch">Marshawn Lynch</a>, RB</td>
+<td align="left">SEA</td>
+<td>280</td>
+<td class="sortcell">1,306</td>
+<td>4.7</td>
+<td>79</td>
+<td>7</td>
+<td>13</td>
+<td>81.6</td>
+<td>1</td>
+<td>65</td>
+</tr>
+<tr class="oddrow player-28-11467" align="right">
+<td align="left">5</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/11467/justin-forsett">Justin Forsett</a>, RB</td>
+<td align="left">BAL</td>
+<td>235</td>
+<td class="sortcell">1,266</td>
+<td>5.4</td>
+<td>52</td>
+<td>17</td>
+<td>8</td>
+<td>79.1</td>
+<td>1</td>
+<td>56</td>
+</tr>
+<tr class="evenrow player-28-12497" align="right">
+<td align="left">6</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/12497/arian-foster">Arian Foster</a>, RB</td>
+<td align="left">HOU</td>
+<td>260</td>
+<td class="sortcell">1,246</td>
+<td>4.8</td>
+<td>51</td>
+<td>9</td>
+<td>8</td>
+<td>95.8</td>
+<td>2</td>
+<td>52</td>
+</tr>
+<tr class="oddrow player-28-15848" align="right">
+<td align="left">7</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/15848/eddie-lacy">Eddie Lacy</a>, RB</td>
+<td align="left">GB</td>
+<td>246</td>
+<td class="sortcell">1,139</td>
+<td>4.6</td>
+<td>44</td>
+<td>8</td>
+<td>9</td>
+<td>71.2</td>
+<td>3</td>
+<td>58</td>
+</tr>
+<tr class="evenrow player-28-16803" align="right">
+<td align="left">8</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/16803/jeremy-hill">Jeremy Hill</a>, RB</td>
+<td align="left">CIN</td>
+<td>222</td>
+<td class="sortcell">1,124</td>
+<td>5.1</td>
+<td>85</td>
+<td>8</td>
+<td>9</td>
+<td>70.3</td>
 <td>4</td>
+<td>61</td>
+</tr>
+<tr class="oddrow player-28-8479" align="right">
+<td align="left">9</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/8479/frank-gore">Frank Gore</a>, RB</td>
+<td align="left">SF</td>
+<td>255</td>
+<td class="sortcell">1,106</td>
+<td>4.3</td>
+<td>52</td>
+<td>5</td>
+<td>4</td>
+<td>69.1</td>
+<td>2</td>
+<td>53</td>
+</tr>
+<tr class="evenrow player-28-14886" align="right">
+<td align="left">10</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/14886/lamar-miller">Lamar Miller</a>, RB</td>
+<td align="left">MIA</td>
+<td>216</td>
+<td class="sortcell">1,099</td>
+<td>5.1</td>
+<td>97</td>
+<td>9</td>
+<td>8</td>
+<td>68.7</td>
+<td>2</td>
+<td>57</td>
 </tr>
 <tr class="colhead" align="right">
 <td align="left" style="width:20px;">RK</td>
 <td align="left">PLAYER</td>
 <td align="left">TEAM</td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingAttempts/qualified/false/count/41" title="Rushing attempts">ATT</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/qualified/false/count/41/order/false" title="Rushing yards">YDS</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/yardsPerRushAttempt/qualified/false/count/41" title="Yards per rush attempt">YDS/A</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/longRushing/qualified/false/count/41" title="Longest rush">LONG</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingBigPlays/qualified/false/count/41" title="Carries over 20 yards">20+</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingTouchdowns/qualified/false/count/41" title="Rushing touchdowns">TD</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYardsPerGame/qualified/false/count/41" title="Rushing yards per game">YDS/G</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingFumbles/qualified/false/count/41" title="Rushing fumbles">FUM</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingFirstDowns/qualified/false/count/41" title="Rushing first downs">1DN</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingAttempts/seasontype/2/qualified/false41" title="Rushing attempts">ATT</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/seasontype/2/qualified/false41/order/false" title="Rushing yards">YDS</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/yardsPerRushAttempt/seasontype/2/qualified/false41" title="Yards per rush attempt">YDS/A</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/longRushing/seasontype/2/qualified/false41" title="Longest rush">LONG</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingBigPlays/seasontype/2/qualified/false41" title="Carries over 20 yards">20+</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingTouchdowns/seasontype/2/qualified/false41" title="Rushing touchdowns">TD</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYardsPerGame/seasontype/2/qualified/false41" title="Rushing yards per game">YDS/G</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingFumbles/seasontype/2/qualified/false41" title="Rushing fumbles">FUM</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingFirstDowns/seasontype/2/qualified/false41" title="Rushing first downs">1DN</a></td>
 </tr>
-<tr class="oddrow player-28-8416" align="right">
-<td align="left">61</td>
+<tr class="oddrow player-28-15009" align="right">
+<td align="left">11</td>
 <td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/8416/alex-smith">Alex Smith</a>, QB</td>
-<td align="left">KC</td>
-<td>31</td>
-<td class="sortcell">187</td>
-<td>6.0</td>
-<td>25</td>
-<td>1</td>
-<td>1</td>
-<td>20.8</td>
-<td>1</td>
+<a href="http://espn.go.com/nfl/player/_/id/15009/alfred-morris">Alfred Morris</a>, RB</td>
+<td align="left">WSH</td>
+<td>265</td>
+<td class="sortcell">1,074</td>
+<td>4.1</td>
+<td>30</td>
 <td>9</td>
-</tr>
-<tr class="evenrow player-28-16055" align="right">
-<td align="left">62</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/16055/benjamin-cunningham">Benjamin Cunningham</a>, RB</td>
-<td align="left">STL</td>
+<td>8</td>
+<td>67.1</td>
+<td>2</td>
 <td>48</td>
-<td class="sortcell">185</td>
-<td>3.9</td>
-<td>18</td>
-<td>0</td>
-<td>3</td>
-<td>20.6</td>
-<td>0</td>
-<td>11</td>
 </tr>
-<tr class="oddrow player-28-15823" align="right">
-<td align="left">63</td>
+<tr class="evenrow player-28-11278" align="right">
+<td align="left">12</td>
 <td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/15823/montee-ball">Montee Ball</a>, RB</td>
-<td align="left">DEN</td>
-<td>55</td>
-<td class="sortcell">172</td>
-<td>3.1</td>
-<td>23</td>
+<a href="http://espn.go.com/nfl/player/_/id/11278/matt-forte">Matt Forte</a>, RB</td>
+<td align="left">CHI</td>
+<td>266</td>
+<td class="sortcell">1,038</td>
+<td>3.9</td>
+<td>32</td>
 <td>1</td>
+<td>6</td>
+<td>64.9</td>
 <td>1</td>
-<td>43.0</td>
-<td>1</td>
-<td>9</td>
+<td>63</td>
 </tr>
-<tr class="evenrow player-28-16040" align="right">
+<tr class="oddrow player-28-11307" align="right">
+<td align="left">13</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/11307/jamaal-charles">Jamaal Charles</a>, RB</td>
+<td align="left">KC</td>
+<td>206</td>
+<td class="sortcell">1,033</td>
+<td>5.0</td>
+<td>63</td>
+<td>6</td>
+<td>9</td>
+<td>68.9</td>
+<td>4</td>
+<td>50</td>
+</tr>
+<tr class="evenrow player-28-13981" align="right">
+<td align="left">14</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/13981/mark-ingram">Mark Ingram</a>, RB</td>
+<td align="left">NO</td>
+<td>226</td>
+<td class="sortcell">964</td>
+<td>4.3</td>
+<td>31</td>
+<td>5</td>
+<td>9</td>
+<td>74.2</td>
+<td>1</td>
+<td>47</td>
+</tr>
+<tr class="oddrow player-28-13536" align="right">
+<td align="left">15</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/13536/joique-bell">Joique Bell</a>, RB</td>
+<td align="left">DET</td>
+<td>223</td>
+<td class="sortcell">860</td>
+<td>3.9</td>
+<td>57</td>
+<td>5</td>
+<td>7</td>
+<td>57.3</td>
+<td>5</td>
+<td>43</td>
+</tr>
+<tr class="evenrow player-28-14881" align="right">
+<td align="left">16</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/14881/russell-wilson">Russell Wilson</a>, QB</td>
+<td align="left">SEA</td>
+<td>118</td>
+<td class="sortcell">849</td>
+<td>7.2</td>
+<td>55</td>
+<td>8</td>
+<td>6</td>
+<td>53.1</td>
+<td>5</td>
+<td>45</td>
+</tr>
+<tr class="oddrow player-28-16040" align="right">
 <td align="left"> </td>
 <td align="left">
 <a href="http://espn.go.com/nfl/player/_/id/16040/c.j.-anderson">C.J. Anderson</a>, RB</td>
 <td align="left">DEN</td>
-<td>30</td>
-<td class="sortcell">172</td>
-<td>5.7</td>
-<td>17</td>
-<td>0</td>
-<td>0</td>
-<td>21.5</td>
-<td>0</td>
-<td>11</td>
-</tr>
-<tr class="oddrow player-28-14192" align="right">
-<td align="left">65</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/14192/roy-helu">Roy Helu</a>, RB</td>
-<td align="left">WSH</td>
-<td>33</td>
-<td class="sortcell">169</td>
-<td>5.1</td>
-<td>18</td>
-<td>0</td>
-<td>1</td>
-<td>18.8</td>
-<td>0</td>
+<td>179</td>
+<td class="sortcell">849</td>
+<td>4.7</td>
+<td>27</td>
+<td>7</td>
 <td>8</td>
+<td>56.6</td>
+<td>0</td>
+<td>47</td>
 </tr>
-<tr class="evenrow player-28-14885" align="right">
-<td align="left">66</td>
+<tr class="evenrow player-28-13587" align="right">
+<td align="left">18</td>
 <td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/14885/doug-martin">Doug Martin</a>, RB</td>
-<td align="left">TB</td>
-<td>58</td>
-<td class="sortcell">166</td>
-<td>2.9</td>
-<td>19</td>
-<td>0</td>
-<td>1</td>
-<td>33.2</td>
-<td>0</td>
-<td>11</td>
-</tr>
-<tr class="oddrow player-28-9613" align="right">
-<td align="left">67</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/9613/deangelo-williams">DeAngelo Williams</a>, RB</td>
-<td align="left">CAR</td>
-<td>46</td>
-<td class="sortcell">157</td>
-<td>3.4</td>
-<td>17</td>
-<td>0</td>
-<td>0</td>
-<td>39.3</td>
-<td>1</td>
-<td>5</td>
-</tr>
-<tr class="evenrow player-28-13211" align="right">
-<td align="left">68</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/13211/toby-gerhart">Toby Gerhart</a>, RB</td>
-<td align="left">JAX</td>
-<td>59</td>
-<td class="sortcell">154</td>
-<td>2.6</td>
-<td>13</td>
-<td>0</td>
-<td>1</td>
-<td>19.3</td>
-<td>1</td>
-<td>12</td>
-</tr>
-<tr class="oddrow player-28-2549" align="right">
-<td align="left">69</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/2549/michael-vick">Michael Vick</a>, QB</td>
+<a href="http://espn.go.com/nfl/player/_/id/13587/chris-ivory">Chris Ivory</a>, RB</td>
 <td align="left">NYJ</td>
-<td>24</td>
-<td class="sortcell">149</td>
-<td>6.2</td>
-<td>24</td>
+<td>198</td>
+<td class="sortcell">821</td>
+<td>4.1</td>
+<td>71</td>
 <td>1</td>
-<td>0</td>
-<td>18.6</td>
-<td>2</td>
-<td>10</td>
-</tr>
-<tr class="evenrow player-28-12489" align="right">
-<td align="left"> </td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/12489/donald-brown">Donald Brown</a>, RB</td>
-<td align="left">SD</td>
-<td>63</td>
-<td class="sortcell">149</td>
-<td>2.4</td>
-<td>16</td>
-<td>0</td>
-<td>0</td>
-<td>24.8</td>
-<td>0</td>
 <td>6</td>
+<td>51.3</td>
+<td>2</td>
+<td>42</td>
+</tr>
+<tr class="oddrow player-28-11247" align="right">
+<td align="left">19</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/11247/jonathan-stewart">Jonathan Stewart</a>, RB</td>
+<td align="left">CAR</td>
+<td>175</td>
+<td class="sortcell">809</td>
+<td>4.6</td>
+<td>69</td>
+<td>4</td>
+<td>3</td>
+<td>62.2</td>
+<td>2</td>
+<td>42</td>
+</tr>
+<tr class="evenrow player-28-16784" align="right">
+<td align="left">20</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/16784/tre-mason">Tre Mason</a>, RB</td>
+<td align="left">STL</td>
+<td>179</td>
+<td class="sortcell">765</td>
+<td>4.3</td>
+<td>89</td>
+<td>6</td>
+<td>4</td>
+<td>63.8</td>
+<td>2</td>
+<td>37</td>
 </tr>
 <tr class="colhead" align="right">
 <td align="left" style="width:20px;">RK</td>
 <td align="left">PLAYER</td>
 <td align="left">TEAM</td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingAttempts/qualified/false/count/41" title="Rushing attempts">ATT</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/qualified/false/count/41/order/false" title="Rushing yards">YDS</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/yardsPerRushAttempt/qualified/false/count/41" title="Yards per rush attempt">YDS/A</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/longRushing/qualified/false/count/41" title="Longest rush">LONG</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingBigPlays/qualified/false/count/41" title="Carries over 20 yards">20+</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingTouchdowns/qualified/false/count/41" title="Rushing touchdowns">TD</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYardsPerGame/qualified/false/count/41" title="Rushing yards per game">YDS/G</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingFumbles/qualified/false/count/41" title="Rushing fumbles">FUM</a></td>
-<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingFirstDowns/qualified/false/count/41" title="Rushing first downs">1DN</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingAttempts/seasontype/2/qualified/false41" title="Rushing attempts">ATT</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/seasontype/2/qualified/false41/order/false" title="Rushing yards">YDS</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/yardsPerRushAttempt/seasontype/2/qualified/false41" title="Yards per rush attempt">YDS/A</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/longRushing/seasontype/2/qualified/false41" title="Longest rush">LONG</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingBigPlays/seasontype/2/qualified/false41" title="Carries over 20 yards">20+</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingTouchdowns/seasontype/2/qualified/false41" title="Rushing touchdowns">TD</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYardsPerGame/seasontype/2/qualified/false41" title="Rushing yards per game">YDS/G</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingFumbles/seasontype/2/qualified/false41" title="Rushing fumbles">FUM</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingFirstDowns/seasontype/2/qualified/false41" title="Rushing first downs">1DN</a></td>
 </tr>
-<tr class="oddrow player-28-12516" align="right">
-<td align="left">71</td>
+<tr class="oddrow player-28-16889" align="right">
+<td align="left">21</td>
 <td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/12516/knowshon-moreno">Knowshon Moreno</a>, RB</td>
-<td align="left">MIA</td>
-<td>31</td>
-<td class="sortcell">148</td>
-<td>4.8</td>
-<td>15</td>
-<td>0</td>
+<a href="http://espn.go.com/nfl/player/_/id/16889/andre-williams">Andre Williams</a>, RB</td>
+<td align="left">NYG</td>
+<td>217</td>
+<td class="sortcell">721</td>
+<td>3.3</td>
+<td>50</td>
+<td>4</td>
+<td>7</td>
+<td>45.1</td>
 <td>1</td>
-<td>49.3</td>
-<td>0</td>
-<td>8</td>
+<td>30</td>
 </tr>
-<tr class="evenrow player-28-14894" align="right">
-<td align="left"> </td>
+<tr class="evenrow player-28-5549" align="right">
+<td align="left">22</td>
 <td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/14894/robert-turbin">Robert Turbin</a>, RB</td>
-<td align="left">SEA</td>
-<td>32</td>
-<td class="sortcell">148</td>
-<td>4.6</td>
-<td>17</td>
-<td>0</td>
-<td>0</td>
-<td>16.4</td>
-<td>1</td>
-<td>6</td>
-</tr>
-<tr class="oddrow player-28-13158" align="right">
-<td align="left">73</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/13158/antone-smith">Antone Smith</a>, RB</td>
+<a href="http://espn.go.com/nfl/player/_/id/5549/steven-jackson">Steven Jackson</a>, RB</td>
 <td align="left">ATL</td>
-<td>23</td>
-<td class="sortcell">144</td>
-<td>6.3</td>
-<td>48</td>
+<td>190</td>
+<td class="sortcell">707</td>
+<td>3.7</td>
+<td>55</td>
 <td>2</td>
-<td>2</td>
-<td>16.0</td>
-<td>1</td>
 <td>6</td>
-</tr>
-<tr class="evenrow player-28-8664" align="right">
-<td align="left">74</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/8664/ryan-fitzpatrick">Ryan Fitzpatrick</a>, QB</td>
-<td align="left">HOU</td>
-<td>36</td>
-<td class="sortcell">143</td>
-<td>4.0</td>
-<td>16</td>
+<td>47.1</td>
 <td>0</td>
-<td>1</td>
-<td>15.9</td>
-<td>2</td>
-<td>10</td>
+<td>37</td>
 </tr>
-<tr class="oddrow player-28-16942" align="right">
+<tr class="oddrow player-28-15826" align="right">
+<td align="left">23</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/15826/giovani-bernard">Giovani Bernard</a>, RB</td>
+<td align="left">CIN</td>
+<td>168</td>
+<td class="sortcell">680</td>
+<td>4.0</td>
+<td>89</td>
+<td>2</td>
+<td>5</td>
+<td>52.3</td>
+<td>0</td>
+<td>32</td>
+</tr>
+<tr class="evenrow player-28-16783" align="right">
+<td align="left">24</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/16783/terrance-west">Terrance West</a>, RB</td>
+<td align="left">CLE</td>
+<td>171</td>
+<td class="sortcell">673</td>
+<td>3.9</td>
+<td>36</td>
+<td>4</td>
+<td>4</td>
+<td>48.1</td>
+<td>1</td>
+<td>30</td>
+</tr>
+<tr class="oddrow player-28-11258" align="right">
+<td align="left">25</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/11258/chris-johnson">Chris Johnson</a>, RB</td>
+<td align="left">NYJ</td>
+<td>155</td>
+<td class="sortcell">663</td>
+<td>4.3</td>
+<td>47</td>
+<td>4</td>
+<td>1</td>
+<td>41.4</td>
+<td>1</td>
+<td>21</td>
+</tr>
+<tr class="evenrow player-28-15893" align="right">
+<td align="left">26</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/15893/andre-ellington">Andre Ellington</a>, RB</td>
+<td align="left">ARI</td>
+<td>201</td>
+<td class="sortcell">660</td>
+<td>3.3</td>
+<td>22</td>
+<td>4</td>
+<td>3</td>
+<td>55.0</td>
+<td>2</td>
+<td>27</td>
+</tr>
+<tr class="oddrow player-28-12503" align="right">
+<td align="left">27</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/12503/rashad-jennings">Rashad Jennings</a>, RB</td>
+<td align="left">NYG</td>
+<td>167</td>
+<td class="sortcell">639</td>
+<td>3.8</td>
+<td>18</td>
+<td>0</td>
+<td>4</td>
+<td>58.1</td>
+<td>0</td>
+<td>38</td>
+</tr>
+<tr class="evenrow player-28-14001" align="right">
 <td align="left"> </td>
 <td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/16942/ka'deem-carey">Ka'Deem Carey</a>, RB</td>
-<td align="left">CHI</td>
-<td>30</td>
-<td class="sortcell">143</td>
-<td>4.8</td>
-<td>15</td>
-<td>0</td>
-<td>0</td>
-<td>15.9</td>
-<td>0</td>
-<td>10</td>
-</tr>
-<tr class="evenrow player-28-15864" align="right">
-<td align="left">76</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/15864/geno-smith">Geno Smith</a>, QB</td>
-<td align="left">NYJ</td>
-<td>35</td>
-<td class="sortcell">139</td>
-<td>4.0</td>
-<td>17</td>
-<td>0</td>
+<a href="http://espn.go.com/nfl/player/_/id/14001/colin-kaepernick">Colin Kaepernick</a>, QB</td>
+<td align="left">SF</td>
+<td>104</td>
+<td class="sortcell">639</td>
+<td>6.1</td>
+<td>90</td>
+<td>7</td>
 <td>1</td>
-<td>17.4</td>
-<td>3</td>
-<td>14</td>
+<td>39.9</td>
+<td>5</td>
+<td>28</td>
 </tr>
-<tr class="oddrow player-28-14056" align="right">
-<td align="left">77</td>
+<tr class="oddrow player-28-17133" align="right">
+<td align="left">29</td>
 <td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/14056/daniel-thomas">Daniel Thomas</a>, RB</td>
-<td align="left">MIA</td>
-<td>37</td>
-<td class="sortcell">138</td>
-<td>3.7</td>
-<td>15</td>
-<td>0</td>
-<td>0</td>
-<td>19.7</td>
-<td>1</td>
-<td>6</td>
-</tr>
-<tr class="evenrow player-28-10713" align="right">
-<td align="left">78</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/10713/pierre-thomas">Pierre Thomas</a>, RB</td>
-<td align="left">NO</td>
-<td>30</td>
-<td class="sortcell">133</td>
-<td>4.4</td>
-<td>27</td>
-<td>1</td>
-<td>2</td>
-<td>22.2</td>
-<td>0</td>
-<td>8</td>
-</tr>
-<tr class="oddrow player-28-15364" align="right">
-<td align="left">79</td>
-<td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/15364/jonas-gray">Jonas Gray</a>, RB</td>
-<td align="left">NE</td>
-<td>32</td>
-<td class="sortcell">131</td>
+<a href="http://espn.go.com/nfl/player/_/id/17133/isaiah-crowell">Isaiah Crowell</a>, RB</td>
+<td align="left">CLE</td>
+<td>148</td>
+<td class="sortcell">607</td>
 <td>4.1</td>
+<td>35</td>
+<td>5</td>
+<td>8</td>
+<td>37.9</td>
+<td>3</td>
+<td>34</td>
+</tr>
+<tr class="evenrow player-28-15951" align="right">
+<td align="left">30</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/15951/denard-robinson">Denard Robinson</a>, RB</td>
+<td align="left">JAX</td>
+<td>135</td>
+<td class="sortcell">582</td>
+<td>4.3</td>
+<td>41</td>
+<td>4</td>
+<td>4</td>
+<td>44.8</td>
+<td>2</td>
+<td>23</td>
+</tr>
+<tr class="colhead" align="right">
+<td align="left" style="width:20px;">RK</td>
+<td align="left">PLAYER</td>
+<td align="left">TEAM</td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingAttempts/seasontype/2/qualified/false41" title="Rushing attempts">ATT</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/seasontype/2/qualified/false41/order/false" title="Rushing yards">YDS</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/yardsPerRushAttempt/seasontype/2/qualified/false41" title="Yards per rush attempt">YDS/A</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/longRushing/seasontype/2/qualified/false41" title="Longest rush">LONG</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingBigPlays/seasontype/2/qualified/false41" title="Carries over 20 yards">20+</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingTouchdowns/seasontype/2/qualified/false41" title="Rushing touchdowns">TD</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYardsPerGame/seasontype/2/qualified/false41" title="Rushing yards per game">YDS/G</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingFumbles/seasontype/2/qualified/false41" title="Rushing fumbles">FUM</a></td>
+<td><a href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingFirstDowns/seasontype/2/qualified/false41" title="Rushing first downs">1DN</a></td>
+</tr>
+<tr class="oddrow player-28-17452" align="right">
+<td align="left"> </td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/17452/branden-oliver">Branden Oliver</a>, RB</td>
+<td align="left">SD</td>
+<td>160</td>
+<td class="sortcell">582</td>
+<td>3.6</td>
+<td>52</td>
+<td>3</td>
+<td>3</td>
+<td>41.6</td>
+<td>0</td>
+<td>30</td>
+</tr>
+<tr class="evenrow player-28-14360" align="right">
+<td align="left">32</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/14360/matt-asiata">Matt Asiata</a>, RB</td>
+<td align="left">MIN</td>
+<td>164</td>
+<td class="sortcell">570</td>
+<td>3.5</td>
 <td>19</td>
 <td>0</td>
-<td>0</td>
-<td>43.7</td>
-<td>0</td>
-<td>6</td>
+<td>9</td>
+<td>38.0</td>
+<td>1</td>
+<td>33</td>
 </tr>
-<tr class="evenrow player-28-14874" align="right">
-<td align="left">80</td>
+<tr class="oddrow player-28-16794" align="right">
+<td align="left">33</td>
 <td align="left">
-<a href="http://espn.go.com/nfl/player/_/id/14874/andrew-luck">Andrew Luck</a>, QB</td>
-<td align="left">IND</td>
-<td>35</td>
-<td class="sortcell">129</td>
+<a href="http://espn.go.com/nfl/player/_/id/16794/bishop-sankey">Bishop Sankey</a>, RB</td>
+<td align="left">TEN</td>
+<td>152</td>
+<td class="sortcell">569</td>
 <td>3.7</td>
-<td>15</td>
-<td>0</td>
+<td>22</td>
+<td>1</td>
 <td>2</td>
-<td>14.3</td>
+<td>35.6</td>
+<td>2</td>
+<td>26</td>
+</tr>
+<tr class="evenrow player-28-13994" align="right">
+<td align="left">34</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/13994/cam-newton">Cam Newton</a>, QB</td>
+<td align="left">CAR</td>
+<td>103</td>
+<td class="sortcell">539</td>
+<td>5.2</td>
+<td>22</td>
+<td>2</td>
+<td>5</td>
+<td>38.5</td>
 <td>3</td>
-<td>10</td>
+<td>45</td>
+</tr>
+<tr class="oddrow player-28-16782" align="right">
+<td align="left">35</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/16782/jerick-mckinnon">Jerick McKinnon</a>, RB</td>
+<td align="left">MIN</td>
+<td>113</td>
+<td class="sortcell">538</td>
+<td>4.8</td>
+<td>55</td>
+<td>4</td>
+<td>0</td>
+<td>48.9</td>
+<td>0</td>
+<td>21</td>
+</tr>
+<tr class="evenrow player-28-11238" align="right">
+<td align="left">36</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/11238/darren-mcfadden">Darren McFadden</a>, RB</td>
+<td align="left">OAK</td>
+<td>155</td>
+<td class="sortcell">534</td>
+<td>3.4</td>
+<td>25</td>
+<td>1</td>
+<td>2</td>
+<td>33.4</td>
+<td>1</td>
+<td>20</td>
+</tr>
+<tr class="oddrow player-28-16921" align="right">
+<td align="left">37</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/16921/alfred-blue">Alfred Blue</a>, RB</td>
+<td align="left">HOU</td>
+<td>169</td>
+<td class="sortcell">528</td>
+<td>3.1</td>
+<td>46</td>
+<td>2</td>
+<td>2</td>
+<td>33.0</td>
+<td>0</td>
+<td>29</td>
+</tr>
+<tr class="evenrow player-28-10195" align="right">
+<td align="left">38</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/10195/fred-jackson">Fred Jackson</a>, RB</td>
+<td align="left">BUF</td>
+<td>141</td>
+<td class="sortcell">525</td>
+<td>3.7</td>
+<td>38</td>
+<td>1</td>
+<td>2</td>
+<td>37.5</td>
+<td>0</td>
+<td>24</td>
+</tr>
+<tr class="oddrow player-28-14884" align="right">
+<td align="left">39</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/14884/trent-richardson">Trent Richardson</a>, RB</td>
+<td align="left">IND</td>
+<td>159</td>
+<td class="sortcell">519</td>
+<td>3.3</td>
+<td>27</td>
+<td>1</td>
+<td>3</td>
+<td>34.6</td>
+<td>2</td>
+<td>25</td>
+</tr>
+<tr class="evenrow player-28-14885" align="right">
+<td align="left">40</td>
+<td align="left">
+<a href="http://espn.go.com/nfl/player/_/id/14885/doug-martin">Doug Martin</a>, RB</td>
+<td align="left">TB</td>
+<td>134</td>
+<td class="sortcell">494</td>
+<td>3.7</td>
+<td>63</td>
+<td>2</td>
+<td>2</td>
+<td>44.9</td>
+<td>0</td>
+<td>23</td>
 </tr>
 				</table>
 			</div>
 			<div class="mod-footer">
 				<div class="foot-content page-select">
 <div class="totalResults" style="float: left;">
-269 Results</div>
+316 Results</div>
 <div class="controls" style="float: right;">
-<a rel="nofollow" href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/qualified/false" style="padding: 0"><div class="jcarousel-prev jcarousel-prev"></div>
-</a><div class="page-numbers">2 of 7</div>
-<a rel="nofollow" href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/qualified/false/count/81" style="padding: 0"><div class="jcarousel-next"></div>
+<div class="jcarousel-prev jcarousel-prev-disabled"></div>
+<div class="page-numbers">1 of 8</div>
+<a rel="nofollow" href="http://espn.go.com/nfl/statistics/player/_/stat/rushing/sort/rushingYards/seasontype/2/qualified/false/count/41" style="padding: 0"><div class="jcarousel-next"></div>
 </a>
 </div>
 </div>
@@ -909,7 +910,7 @@ var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign I
 <!-- begin sp links -->
 <div style="margin: 10px 0 0 0;">
 <!-- CONTENT: 09stats758, SPORT: nfl--><div style="margin:0px 0px 5px 0px; text-align: center; width: 758px;">
-<ins id="splinks-92322"></ins>
+<ins id="splinks-27575"></ins>
         <script type="text/javascript">
             (function($) {
                 // config params
@@ -923,7 +924,7 @@ var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign I
                 function buildIframe(width, height, client, channel) {
                     var path = 'http://sports-ak.espn.go.com/espn/sponsoredlinks/adsense/iframeCached';
                     // pass params as the hash as they are only needed on the client
-                    var hash = '92322|' + width + '|' + height + '|' + client + '|' + channel + '|' + lang;
+                    var hash = '27575|' + width + '|' + height + '|' + client + '|' + channel + '|' + lang;
                     var iframe = '<iframe seamless scrolling="no" frameborder="0" height="' + height + '" width="' + width + '" src="' + path + '#' + hash + '"></iframe>';
                     return iframe;
                 }
@@ -948,13 +949,13 @@ var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign I
                             // outside US or not on desktop
                             client = 'ca-espn-nq';
                         }
-                        $('#splinks-92322').html(buildIframe(width, height, client, channel));
+                        $('#splinks-27575').html(buildIframe(width, height, client, channel));
                     }).fail(function() {
-                        $('#splinks-92322').html(buildIframe(width, height, 'ca-espn-nq', channel));
+                        $('#splinks-27575').html(buildIframe(width, height, 'ca-espn-nq', channel));
                     });
                 } else {
                     // can't locate them, assume they are outside US
-                    $('#splinks-92322').html(buildIframe(width, height, 'ca-espn-nq', channel));
+                    $('#splinks-27575').html(buildIframe(width, height, 'ca-espn-nq', channel));
                 }
             })(jQuery);
         </script>
@@ -969,7 +970,7 @@ var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign I
 	<div class="col-ad-160">
 		<div class="ad-box">
 <!-- begin Poster --><div class="gutter">
-<!--espn.us.com.nfl sitezone-->
+<!--espn.us.com.nfl sitezone--><!--http://ad.Doubleclick.net hostUrl-->
 <script>if("undefined"!=typeof ad_kvps&&"undefined"!=typeof ad_u&&"undefined"!=typeof ad_counter&&"undefined"!=typeof ad_ord){if("undefined"==typeof ad_site||"undefined"==typeof ad_zone)var ad_site="espn.us.com.nfl",ad_zone="nflstatisticsplayer";var ad_finalString="http://ad.Doubleclick.net/adj/"+ad_site+"/"+ad_zone+";"+ad_kvps+"pos=Poster;"+ad_u+"sz=160x600,1x1;tile="+ad_counter+";ord="+ad_ord;document.write('<div data-cb-ad-id="Poster" data-cb-dfp-id="'+ad_kvps+'sz=160x600,1x1"><script src='+ad_finalString+'>\x3c/script></div>');ad_counter++};</script>
 <noscript><a href="http://ad.Doubleclick.net/jump/espn.us.com.nfl/nflstatisticsplayer;pgtyp=nflstatisticsplayer;sp=espn;sz=160x600,1x1;" target="_blank"><img src="http://ad.Doubleclick.net/ad/espn.us.com.nfl/nflstatisticsplayer;pgtyp=nflstatisticsplayer;sp=espn;sz=160x600,1x1;" border="0" alt=""></a></noscript>
 </div>
@@ -977,7 +978,7 @@ var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign I
 </div>
 <div>
 <!-- CONTENT: 09storyright160, SPORT: nfl--><div style="margin:0px 0px 5px 0px; text-align: center; width: 160px;">
-<ins id="splinks-84238"></ins>
+<ins id="splinks-96080"></ins>
         <script type="text/javascript">
             (function($) {
                 // config params
@@ -991,7 +992,7 @@ var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign I
                 function buildIframe(width, height, client, channel) {
                     var path = 'http://sports-ak.espn.go.com/espn/sponsoredlinks/adsense/iframeCached';
                     // pass params as the hash as they are only needed on the client
-                    var hash = '84238|' + width + '|' + height + '|' + client + '|' + channel + '|' + lang;
+                    var hash = '96080|' + width + '|' + height + '|' + client + '|' + channel + '|' + lang;
                     var iframe = '<iframe seamless scrolling="no" frameborder="0" height="' + height + '" width="' + width + '" src="' + path + '#' + hash + '"></iframe>';
                     return iframe;
                 }
@@ -1016,13 +1017,13 @@ var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign I
                             // outside US or not on desktop
                             client = 'ca-espn-nq';
                         }
-                        $('#splinks-84238').html(buildIframe(width, height, client, channel));
+                        $('#splinks-96080').html(buildIframe(width, height, client, channel));
                     }).fail(function() {
-                        $('#splinks-84238').html(buildIframe(width, height, 'ca-espn-nq', channel));
+                        $('#splinks-96080').html(buildIframe(width, height, 'ca-espn-nq', channel));
                     });
                 } else {
                     // can't locate them, assume they are outside US
-                    $('#splinks-84238').html(buildIframe(width, height, 'ca-espn-nq', channel));
+                    $('#splinks-96080').html(buildIframe(width, height, 'ca-espn-nq', channel));
                 }
             })(jQuery);
         </script>
@@ -1236,7 +1237,7 @@ var myEspnText = {'welcometext':'Welcome','register':'Register','signin':'Sign I
 <!--<li><a href="http://espn.go.com/nfl/injuries" name="&lpos=subnav&lid=subnav_Injuries">Injuries</a></li>--><li><a href="http://espn.go.com/espn/chalk/" name="&amp;lpos=subnav&amp;lid=subnav_betting">Odds info</a></li>
 <li><a href="http://espn.go.com/blog/nflnation" name="&amp;lpos=subnav&amp;lid=subnav_blog">NFL Nation </a></li>
 <li><a href="http://espn.go.com/nfl/draft" name="&amp;lpos=subnav&amp;lid=subnav_NFL_Draft">Draft</a></li>
-<li><a href="http://espn.go.com/nfl/mnf">MN HQ</a></li>
+<li><a href="http://espn.go.com/nfl/playoffs/2014/matchup">SB XLIX</a></li>
 <li><a href="http://insider.espn.go.com/nfl/features/rumors" name="&amp;lpos=subnav&amp;lid=subnav_NFL_Rumors">Rumors</a></li>
 <li><a href="http://www.tsn.ca/cfl/">CFL</a></li>
 <li class="expandable">
@@ -1283,7 +1284,7 @@ var link = window.location;
 var bugText = '<a href="#" onclick="window.open(\'http://dynamic.espn.go.com/espn/bugs?url=' + escape(link) + '\', \'Bugs\',\'noresizable,noscrollbars,height=400,width=400\');">Report a Bug</a> | ';
 //]]>
 </script>
-<span style="font-weight:bold;">ESPN.com:</span> <a href="http://sports.espn.go.com/espn/news/story?page=help/index">Help</a> | <a href="http://espnmediazone.com/us/" rel="nofollow">Press</a> | <a href="http://www.espncms.com/Advertise-on-ESPN.aspx" rel="nofollow">Advertise on ESPN.com</a> | <a href="http://www.espncms.com" rel="nofollow">Sales Media Kit</a> | <a href="http://preferences.truste.com/2.0/?type=espn&amp;affiliateId=148" onclick="window.open('http://preferences.truste.com/2.0/?type=espn&amp;affiliateId=148','popup','width=986,height=878,scrollbars=yes,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false">Interest-Based Ads</a> | <script type="text/javascript">document.write(bugText);</script><a href="http://espn.go.com/espn/corrections">Corrections</a> | <a href="http://sports.espn.go.com/espn/news/story?page=contact/index">Contact Us</a> | <a href="http://espn.go.com/espn/sitemap">Site Map</a> | <a href="http://espncareers.com">Jobs at ESPN</a> | <!--a href="http://corporate.disney.go.com/corporate/sourcing.html" rel="nofollow"><span style="font-weight:bold;">Supplier Information</span></a--><a href="http://go.com">Go.com</a><br>© 2014  ESPN Internet Ventures. <a href="http://disneytermsofuse.com/" rel="nofollow">Terms of Use</a>, <a href="http://disneyprivacycenter.com/" rel="nofollow">Privacy Policy</a>, <a href="https://disneyprivacycenter.com/notice-to-california-residents/" rel="nofollow">Your California Privacy Rights</a>,  <a href="https://disneyprivacycenter.com/kids-privacy-policy/english/">Children's Online Privacy Policy</a> and <a href="http://preferences-mgr.truste.com/?type=espn&amp;affiliateId=148">Interest-Based Ads</a> are applicable to you.  All rights reserved.
+<span style="font-weight:bold;">ESPN.com:</span> <a href="http://sports.espn.go.com/espn/news/story?page=help/index">Help</a> | <a href="http://espnmediazone.com/us/" rel="nofollow">Press</a> | <a href="http://www.espncms.com/Advertise-on-ESPN.aspx" rel="nofollow">Advertise on ESPN.com</a> | <a href="http://www.espncms.com" rel="nofollow">Sales Media Kit</a> | <a href="http://preferences.truste.com/2.0/?type=espn&amp;affiliateId=148" onclick="window.open('http://preferences.truste.com/2.0/?type=espn&amp;affiliateId=148','popup','width=986,height=878,scrollbars=yes,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false">Interest-Based Ads</a> | <script type="text/javascript">document.write(bugText);</script><a href="http://espn.go.com/espn/corrections">Corrections</a> | <a href="http://sports.espn.go.com/espn/news/story?page=contact/index">Contact Us</a> | <a href="http://espn.go.com/espn/sitemap">Site Map</a> | <a href="http://espncareers.com">Jobs at ESPN</a> | <!--a href="http://corporate.disney.go.com/corporate/sourcing.html" rel="nofollow"><span style="font-weight:bold;">Supplier Information</span></a--><a href="http://go.com">Go.com</a><br>© 2015  ESPN Internet Ventures. <a href="http://disneytermsofuse.com/" rel="nofollow">Terms of Use</a>, <a href="http://disneyprivacycenter.com/" rel="nofollow">Privacy Policy</a>, <a href="https://disneyprivacycenter.com/notice-to-california-residents/" rel="nofollow">Your California Privacy Rights</a>,  <a href="https://disneyprivacycenter.com/kids-privacy-policy/english/">Children's Online Privacy Policy</a> and <a href="http://preferences-mgr.truste.com/?type=espn&amp;affiliateId=148">Interest-Based Ads</a> are applicable to you.  All rights reserved.
 
 <!--
 <a href="http://www.espnshop.com/" onClick="location.href('http://log.go.com/log?srvc=sz&guid=73B641A0-6660-4EFC-B8FF-9DE23E8CD9BD&drop=0&addata=3374:65:478847:65&a=1&goto=http://www.espnshop.com/');return false">Shop</a>
@@ -1361,13 +1362,13 @@ var bugText = '<a href="#" onclick="window.open(\'http://dynamic.espn.go.com/esp
 			// we want to load the analytics files from the cache if possible - so, let's use full $.ajax() calls
 			$.ajax({
 				type:'GET',
-				url: 'http://a.espncdn.com/combiner/c?js=analytics/sOmni.js,analytics/analytics.js,analytics/externalnielsen.js&v=7',
+				url: 'http://a.espncdn.com/combiner/c?js=analytics/sOmni.js,analytics/analytics.js,analytics/externalnielsen.js&v=14',
 				dataType: 'script',
 				cache: true,
 				success: function() {
 					var lgSrc;
 					if(typeof anCV !== undef && anCV === '' && document.getElementById('form-memberarea') != null) {
-						lgSrc = 'https://r.espn.go.com/members/util/getUserInfo?cb=runOmnitureIndependently';
+						lgSrc = 'https://r.espn.go.com/members/util/getUserInfo?cb=runOmnitureIndependently&regType=true';
 						$.getScript(lgSrc); // we don't want this to be cached - so we'll use the $.getScript() method
 					} else {
 						callOmniture();
