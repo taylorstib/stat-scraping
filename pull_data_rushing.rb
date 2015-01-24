@@ -38,6 +38,8 @@ CSV.open('data_hold/rushing1.csv', 'w') do |csv|
   end
 end
 
+puts "End of 1st page"
+
 page2 = Nokogiri::HTML(open('stat_pages/rushing41.html'))
 
 CSV.open('data_hold/rushing1.csv', 'a+') do |csv|
@@ -64,6 +66,8 @@ arr = []
     end
   end
 end
+
+puts "End of page 2"
 
 page3 = Nokogiri::HTML(open('stat_pages/rushing81.html'))
 
@@ -92,6 +96,8 @@ arr = []
   end
 end
 
+puts "End of page 3"
+
 page4 = Nokogiri::HTML(open('stat_pages/rushing121.html'))
 
 CSV.open('data_hold/rushing1.csv', 'a+') do |csv|
@@ -119,6 +125,7 @@ arr = []
   end
 end
 
+puts "End of page 4"
 page5 = Nokogiri::HTML(open('stat_pages/rushing161.html'))
 
 CSV.open('data_hold/rushing1.csv', 'a+') do |csv|
@@ -145,6 +152,7 @@ arr = []
     end
   end
 end
+puts "End of page 5"
 
 page6 = Nokogiri::HTML(open('stat_pages/rushing201.html'))
 
@@ -172,6 +180,7 @@ arr = []
     end
   end
 end
+puts "End of page 6"
 
 page7 = Nokogiri::HTML(open('stat_pages/rushing241.html'))
 
@@ -200,6 +209,8 @@ arr = []
   end
 end
 
+puts "End of page 7"
+
 page8 = Nokogiri::HTML(open('stat_pages/rushing281.html'))
 
 CSV.open('data_hold/rushing1.csv', 'a+') do |csv|
@@ -226,3 +237,4 @@ arr = []
     end
   end
 end
+puts "End of page 8"
