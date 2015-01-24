@@ -9,5 +9,7 @@ pull_data.rb pages format the stats into a neat csv file.
 ### Work in progress
 - Want to make it a single pull_data script (check issues for specifics)
 - Turn it into a gem
+  - (Currently in development)
 - Have the data hold pages labeled for the given season and week number
-- Ability to scrabe past seasons??
+- Ability to scrape past seasons??
+  - (this will be implemented for the CLI tool being built)
