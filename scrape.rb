@@ -7,7 +7,7 @@ BASE_URL = 'http://espn.go.com/nfl/statistics/player/_/stat/'
 BASE_DIR = {:passing => 'passing/sort/passingYards/seasontype/2/qualified/false/count/',
             :rushing => 'rushing/seasontype/2/qualified/false/count/',
             :receiving => 'receiving/sort/receivingYards/seasontype/2/qualified/false/count/',
-            # :kicking => 'kicking/sort/fieldGoalsMade/qualified/false/count/'
+            # :kicking => 'kicking/sort/fieldGoalsMade/qualified/false/count/'  ##Never implemented
           }
 
 def scrape_passing
