@@ -11,7 +11,9 @@ BASE_DIR = {:passing => 'passing/sort/passingYards/seasontype/2/qualified/false/
           }
 
 def scrape_passing
-  counts = [1, 41, 81, 121, 161, 201, 241, 281, 321, 361, 401, 441, 481, 521, 561, 601]
+  arr = []
+  counts = (1..900).step(40) { |i| arr.push(i) }
+  
   page = Nokogiri::HTML(open(BASE_URL + BASE_DIR[:passing] + '1'))
   #### Writes the first file ####
   File.open("stat_pages/passing1.html", 'w'){|f| f.write(page.to_html)}
@@ -33,7 +35,7 @@ def scrape_passing
 
   if num_pages > 1
     #### Grabs each page of stats for passing ####
-    counts[(1..(num_pages-1))].each do |x|
+    arr[(1..(num_pages-1))].each do |x|
         page = Nokogiri::HTML(open(BASE_URL + BASE_DIR[:passing] + "#{x}"))
         #### Writes page to an HTML file on disk ####
         File.open("stat_pages/passing#{x}.html", 'w'){|f| f.write(page.to_html)}
@@ -110,6 +112,6 @@ def scrape_receiving
 end
 
 
-# scrape_passing
+scrape_passing
 # scrape_rushing
-scrape_receiving
+# scrape_receiving
