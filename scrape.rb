@@ -4,10 +4,9 @@ require 'open-uri'
 require 'fileutils'
 
 BASE_URL = 'http://espn.go.com/nfl/statistics/player/_/stat/'
-BASE_DIR = {:passing => 'passing/sort/passingYards/seasontype/2/qualified/false/count/',
-            :rushing => 'rushing/seasontype/2/qualified/false/count/',
-            :receiving => 'receiving/sort/receivingYards/seasontype/2/qualified/false/count/',
-            # :kicking => 'kicking/sort/fieldGoalsMade/qualified/false/count/'  ##Never implemented
+BASE_DIR = {:passing => 'passing/sort/passingYards/year/2013/seasontype/2/qualified/false/count/',
+            :rushing => 'rushing/sort/rushingYards/year/2013/seasontype/2/qualified/false/count/',
+            :receiving => 'receiving/sort/receivingYards/year/2013/seasontype/2/qualified/false/count/',
           }
 
 def scrape_passing
@@ -16,7 +15,7 @@ def scrape_passing
   
   page = Nokogiri::HTML(open(BASE_URL + BASE_DIR[:passing] + '1'))
   #### Writes the first file ####
-  File.open("stat_pages/passing1.html", 'w'){|f| f.write(page.to_html)}
+  File.open("espn_html_pages/passing1.html", 'w'){|f| f.write(page.to_html)}
   puts "First passing file saved successfully"
 
   #### Find the number of results(players) for the given stat request ####
@@ -38,7 +37,7 @@ def scrape_passing
     arr[(1..(num_pages-1))].each do |x|
         page = Nokogiri::HTML(open(BASE_URL + BASE_DIR[:passing] + "#{x}"))
         #### Writes page to an HTML file on disk ####
-        File.open("stat_pages/passing#{x}.html", 'w'){|f| f.write(page.to_html)}
+        File.open("espn_html_pages/passing#{x}.html", 'w'){|f| f.write(page.to_html)}
         puts "File passing#{x} saved successfully"
     end
   end
@@ -46,10 +45,12 @@ def scrape_passing
 end
 
 def scrape_rushing
-  counts = [1, 41, 81, 121, 161, 201, 241, 281, 321, 361, 401, 441, 481, 521, 561, 601]
+  arr = []
+  counts = (1..900).step(40) { |i| arr.push(i) }
+
   page = Nokogiri::HTML(open(BASE_URL + BASE_DIR[:rushing] + '1'))
   #### Writes the first file ####
-  File.open("stat_pages/rushing1.html", 'w'){|f| f.write(page.to_html)}
+  File.open("espn_html_pages/rushing1.html", 'w'){|f| f.write(page.to_html)}
   puts "First rushing file saved successfully"
 
   #### Find the number of results(players) for the given stat request ####
@@ -68,10 +69,10 @@ def scrape_rushing
 
   if num_pages > 1
     #### Grabs each page of stats for rushing ####
-    counts[(1..(num_pages-1))].each do |x|
+    arr[(1..(num_pages-1))].each do |x|
         page = Nokogiri::HTML(open(BASE_URL + BASE_DIR[:rushing] + "#{x}"))
         #### Writes page to an HTML file on disk ####
-        File.open("stat_pages/rushing#{x}.html", 'w'){|f| f.write(page.to_html)}
+        File.open("espn_html_pages/rushing#{x}.html", 'w'){|f| f.write(page.to_html)}
         puts "File rushing#{x} saved successfully"
     end
   end
@@ -79,10 +80,12 @@ def scrape_rushing
 end
 
 def scrape_receiving
-  counts = [1, 41, 81, 121, 161, 201, 241, 281, 321, 361, 401, 441, 481, 521, 561, 601]
+  arr = []
+  counts = (1..900).step(40) { |i| arr.push(i) }
+
   page = Nokogiri::HTML(open(BASE_URL + BASE_DIR[:receiving] + '1'))
   #### Writes the first file ####
-  File.open("stat_pages/receiving1.html", 'w'){|f| f.write(page.to_html)}
+  File.open("espn_html_pages/receiving1.html", 'w'){|f| f.write(page.to_html)}
   puts "First Receiving file saved successfully"
 
   #### Find the number of results(players) for the given stat request ####
@@ -101,10 +104,10 @@ def scrape_receiving
 
   if num_pages > 1
     #### Grabs each page of stats for receiving ####
-    counts[(1..(num_pages-1))].each do |x|
+    arr[(1..(num_pages-1))].each do |x|
         page = Nokogiri::HTML(open(BASE_URL + BASE_DIR[:receiving] + "#{x}"))
         #### Writes page to an HTML file on disk ####
-        File.open("stat_pages/receiving#{x}.html", 'w'){|f| f.write(page.to_html)}
+        File.open("espn_html_pages/receiving#{x}.html", 'w'){|f| f.write(page.to_html)}
         puts "File receiving#{x} saved successfully"
     end
   end
@@ -112,6 +115,6 @@ def scrape_receiving
 end
 
 
-scrape_passing
+# scrape_passing
 # scrape_rushing
-# scrape_receiving
+scrape_receiving

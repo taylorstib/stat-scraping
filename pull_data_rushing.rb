@@ -9,9 +9,9 @@ require 'csv'
 #### Last one is the array[11] element ####
 ###########################################
 
-page = Nokogiri::HTML(open('stat_pages/rushing1.html'))
+page = Nokogiri::HTML(open('espn_html_pages/rushing1.html'))
 
-CSV.open('data_hold/rushing1.csv', 'w') do |csv|
+CSV.open('data_hold/rushing2013.csv', 'w') do |csv|
   arr = []
   puts page.css('#my-players-table td').length  #### just tells how many table data cells there are 
 
@@ -40,9 +40,9 @@ end
 
 puts "End of 1st page"
 
-page2 = Nokogiri::HTML(open('stat_pages/rushing41.html'))
+page2 = Nokogiri::HTML(open('espn_html_pages/rushing41.html'))
 
-CSV.open('data_hold/rushing1.csv', 'a+') do |csv|
+CSV.open('data_hold/rushing2013.csv', 'a+') do |csv|
 arr = []
 #### Lists the next 41-80 players #### 
   page2.css('#my-players-table td').each_with_index do |el, i|
@@ -69,9 +69,9 @@ end
 
 puts "End of page 2"
 
-page3 = Nokogiri::HTML(open('stat_pages/rushing81.html'))
+page3 = Nokogiri::HTML(open('espn_html_pages/rushing81.html'))
 
-CSV.open('data_hold/rushing1.csv', 'a+') do |csv|
+CSV.open('data_hold/rushing2013.csv', 'a+') do |csv|
 arr = []
 #### Lists the next 81-120 players #### 
   page3.css('#my-players-table td').each_with_index do |el, i|
@@ -98,9 +98,9 @@ end
 
 puts "End of page 3"
 
-page4 = Nokogiri::HTML(open('stat_pages/rushing121.html'))
+page4 = Nokogiri::HTML(open('espn_html_pages/rushing121.html'))
 
-CSV.open('data_hold/rushing1.csv', 'a+') do |csv|
+CSV.open('data_hold/rushing2013.csv', 'a+') do |csv|
 arr = []
 #### Lists the next 121-160 players #### 
   page4.css('#my-players-table td').each_with_index do |el, i|
@@ -126,9 +126,9 @@ arr = []
 end
 
 puts "End of page 4"
-page5 = Nokogiri::HTML(open('stat_pages/rushing161.html'))
+page5 = Nokogiri::HTML(open('espn_html_pages/rushing161.html'))
 
-CSV.open('data_hold/rushing1.csv', 'a+') do |csv|
+CSV.open('data_hold/rushing2013.csv', 'a+') do |csv|
 arr = []
 #### Lists the next 161-201 players #### 
   page5.css('#my-players-table td').each_with_index do |el, i|
@@ -154,9 +154,9 @@ arr = []
 end
 puts "End of page 5"
 
-page6 = Nokogiri::HTML(open('stat_pages/rushing201.html'))
+page6 = Nokogiri::HTML(open('espn_html_pages/rushing201.html'))
 
-CSV.open('data_hold/rushing1.csv', 'a+') do |csv|
+CSV.open('data_hold/rushing2013.csv', 'a+') do |csv|
 arr = []
 #### Lists the next 201-241 players #### 
   page6.css('#my-players-table td').each_with_index do |el, i|
@@ -182,9 +182,9 @@ arr = []
 end
 puts "End of page 6"
 
-page7 = Nokogiri::HTML(open('stat_pages/rushing241.html'))
+page7 = Nokogiri::HTML(open('espn_html_pages/rushing241.html'))
 
-CSV.open('data_hold/rushing1.csv', 'a+') do |csv|
+CSV.open('data_hold/rushing2013.csv', 'a+') do |csv|
 arr = []
 #### Lists the next 241-280 players #### 
   page7.css('#my-players-table td').each_with_index do |el, i|
@@ -211,9 +211,9 @@ end
 
 puts "End of page 7"
 
-page8 = Nokogiri::HTML(open('stat_pages/rushing281.html'))
+page8 = Nokogiri::HTML(open('espn_html_pages/rushing281.html'))
 
-CSV.open('data_hold/rushing1.csv', 'a+') do |csv|
+CSV.open('data_hold/rushing2013.csv', 'a+') do |csv|
 arr = []
 #### Lists the next 281-__ players #### 
   page8.css('#my-players-table td').each_with_index do |el, i|
