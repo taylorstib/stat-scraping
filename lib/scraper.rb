@@ -11,16 +11,26 @@ BASE_DIR = {:passing => 'passing/sort/passingYards/year/2013/seasontype/2/qualif
           }
 
 class Scraper
-  attr_accessor :position
+  attr_accessor :position, :arr
 
-  def initialize(position='')
-    if ## finish this statement
-    @position = position
+  def initialize(position)
+    if BASE_DIR.keys.include?(position.to_sym)
+      @position = position
+    else
+      raise RuntimeError, "Must be appropriate position (passing, rushing or receiving)"
+    end
+    @arr = []
+  end
+
+  def generate_count
+    counts = (1..921).step(40) do |i|
+      @arr.push(i)
+    end
+    @arr
   end
 
   def scrape
-    arr = []
-    counts = (1..900).step(40) { |i| arr.push(i) }
+    
   end
 
 
