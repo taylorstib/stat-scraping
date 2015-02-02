@@ -11,7 +11,7 @@ BASE_DIR = {:passing => 'passing/sort/passingYards/year/2013/seasontype/2/qualif
           }
 
 class Scraper
-  attr_accessor :position, :arr
+  attr_accessor :position, :arr, :page
 
   def initialize(position)
     if BASE_DIR.keys.include?(position.to_sym)
@@ -19,19 +19,16 @@ class Scraper
     else
       raise RuntimeError, "Must be appropriate position (passing, rushing or receiving)"
     end
-    @arr = []
+    @array_of_count = []
+    @page = ''
   end
 
   def generate_count
-    counts = (1..921).step(40) do |i|
-      @arr.push(i)
-    end
-    @arr
+    counts = (1..921).step(40) { |i| @array_of_count.push(i) }
+    @array_of_count
   end
 
-  def scrape
-    
+  def get_html_page
+    @page = Nokogiri::HTML(open(BASE_URL + BASE_DIR[position.to_sym] + '1'))
   end
-
-
 end
