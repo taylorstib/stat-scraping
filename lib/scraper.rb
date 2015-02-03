@@ -10,6 +10,8 @@ BASE_DIR = {:passing => 'passing/sort/passingYards/year/2013/seasontype/2/qualif
             :receiving => 'receiving/sort/receivingYards/year/2013/seasontype/2/qualified/false/count/',
           }
 
+# This class scrapes ESPN using Nokogiri for further parsing
+# of the stats 
 class Scraper
   attr_accessor :position, :arr, :page
 
