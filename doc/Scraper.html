@@ -110,9 +110,9 @@
       </header>
 
       
-      <div id="attribute-i-arr" class="method-detail">
+      <div id="attribute-i-array_of_count" class="method-detail">
         <div class="method-heading attribute-method-heading">
-          <span class="method-name">arr</span><span
+          <span class="method-name">array_of_count</span><span
             class="attribute-access-type">[RW]</span>
         </div>
 
@@ -123,9 +123,22 @@
         </div>
       </div>
       
-      <div id="attribute-i-page" class="method-detail">
+      <div id="attribute-i-page_quantity" class="method-detail">
         <div class="method-heading attribute-method-heading">
-          <span class="method-name">page</span><span
+          <span class="method-name">page_quantity</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-pages" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">pages</span><span
             class="attribute-access-type">[RW]</span>
         </div>
 
@@ -172,13 +185,15 @@
 
         <div class="method-description">
           
-          
+          <p>Initialize the <a href="Scraper.html">Scraper</a> class with the position
+you want stats for. Options include &#39;passing&#39;, &#39;rushing&#39;,
+and &#39;receiving&#39;.</p>
           
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/scraper.rb, line 18</span>
+            <pre><span class="ruby-comment"># File lib/scraper.rb, line 22</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">position</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-constant">BASE_DIR</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">position</span>.<span class="ruby-identifier">to_sym</span>)
     <span class="ruby-ivar">@position</span> = <span class="ruby-identifier">position</span>
@@ -186,7 +201,7 @@
     <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span>, <span class="ruby-string">&quot;Must be appropriate position (passing, rushing or receiving)&quot;</span>
   <span class="ruby-keyword">end</span>
   <span class="ruby-ivar">@array_of_count</span> = []
-  <span class="ruby-ivar">@page</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-ivar">@pages</span> = []
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -219,13 +234,15 @@
 
         <div class="method-description">
           
-          
+          <p>Generates an array of numbers, counting by how many player records are on
+each HTML page. Allows other methods to paginate through the  stat pages
+and collect them all.</p>
           
           
 
           
           <div class="method-source-code" id="generate_count-source">
-            <pre><span class="ruby-comment"># File lib/scraper.rb, line 28</span>
+            <pre><span class="ruby-comment"># File lib/scraper.rb, line 35</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_count</span>
   <span class="ruby-identifier">counts</span> = (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">921</span>).<span class="ruby-identifier">step</span>(<span class="ruby-value">40</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@array_of_count</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">i</span>) }
   <span class="ruby-ivar">@array_of_count</span>
@@ -253,15 +270,26 @@
 
         <div class="method-description">
           
-          
+          <p>Access the URL and Nokogiri grabs the HTML, parsing it to determine how
+many pages need to be scraped for the given position</p>
           
           
 
           
           <div class="method-source-code" id="get_html_page-source">
-            <pre><span class="ruby-comment"># File lib/scraper.rb, line 33</span>
+            <pre><span class="ruby-comment"># File lib/scraper.rb, line 42</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_html_page</span>
-  <span class="ruby-ivar">@page</span> = <span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">open</span>(<span class="ruby-constant">BASE_URL</span> <span class="ruby-operator">+</span> <span class="ruby-constant">BASE_DIR</span>[<span class="ruby-identifier">position</span>.<span class="ruby-identifier">to_sym</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&#39;1&#39;</span>))
+  <span class="ruby-ivar">@pages</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">open</span>(<span class="ruby-constant">BASE_URL</span> <span class="ruby-operator">+</span> <span class="ruby-constant">BASE_DIR</span>[<span class="ruby-identifier">position</span>.<span class="ruby-identifier">to_sym</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&#39;1&#39;</span>)))
+  
+  <span class="ruby-identifier">results_div</span> = <span class="ruby-ivar">@pages</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">css</span>(<span class="ruby-string">&#39;#my-players-table div.totalResults&#39;</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">content</span>
+  <span class="ruby-identifier">number_results_arr</span> = <span class="ruby-identifier">results_div</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39; &#39;</span>)
+  <span class="ruby-identifier">number_results</span> = <span class="ruby-identifier">number_results_arr</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">to_i</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">number_results</span> <span class="ruby-operator">%</span> <span class="ruby-value">40</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+    <span class="ruby-ivar">@page_quantity</span> = <span class="ruby-identifier">number_results</span><span class="ruby-operator">/</span><span class="ruby-value">40</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@page_quantity</span> = (<span class="ruby-identifier">number_results</span><span class="ruby-operator">/</span><span class="ruby-value">40</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
