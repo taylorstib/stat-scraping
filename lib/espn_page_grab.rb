@@ -17,10 +17,10 @@ class Scraper
     
     page = Nokogiri::HTML(open(BASE_URL + BASE_DIR[position.to_sym] + '1'))
     ## Debugging
-    # STDERR.puts "Found '#{page.title}'"
+    STDERR.puts "Found '#{page.title}'"
     # #### Writes the first file ####
-    # File.open("espn_html_pages/#{position}1.html", 'w'){|f| f.write(page.to_html)}
-    # STDERR.puts "First #{position} file saved successfully"
+    File.open("espn_html_pages/#{position}1.html", 'w'){|f| f.write(page.to_html)}
+    STDERR.puts "First #{position} file saved successfully"
 
     #### Find the number of results(players) for the given stat request ####
     results_div = page.css('#my-players-table div.totalResults').first.content
