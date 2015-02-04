@@ -63,6 +63,14 @@ class Scraper
   end
 
   def write_to_file
+    unless Dir.exists?('./html_hold/')
+      Dir.mkdir('./html_hold/')
+    end
 
+    @pages.each_with_index do |page, i|
+      STDERR.puts "Writing page #{i + 1}"
+      File.open("./html_hold/#{position}_#{i}.html", 'w') { |f| f.write(page.to_html) }
+      STDERR.puts "Files in the directory now are:"
+    end
   end
 end
