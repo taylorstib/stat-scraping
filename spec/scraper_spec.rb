@@ -48,19 +48,19 @@ describe Scraper do
     end
   end
 
-  describe "#get_html_page" do
-      it "Returns a Nokogiri object" do 
-        scraper = Scraper.new('passing')
-        scraper.generate_count
-        scraper.get_html_page
-        expect(scraper.pages[0]).to be_a(Nokogiri::HTML::Document)
-      end
-      it "Finds the right page at specified URL" do 
-        scraper = Scraper.new('passing')
-        scraper.generate_count
-        scraper.get_html_page
-        expect(scraper.pages[0].title).to include("NFL Player #{scraper.position.capitalize} Stats")
-      end
+  # describe "#get_html_page" do
+  #     it "Returns a Nokogiri object" do 
+  #       scraper = Scraper.new('passing')
+  #       scraper.generate_count
+  #       scraper.get_html_page
+  #       expect(scraper.pages[0]).to be_a(Nokogiri::HTML::Document)
+  #     end
+  #     it "Finds the right page at specified URL" do 
+  #       scraper = Scraper.new('passing')
+  #       scraper.generate_count
+  #       scraper.get_html_page
+  #       expect(scraper.pages[0].title).to include("NFL Player #{scraper.position.capitalize} Stats")
+  #     end
     # context 'after finding the appropriate HTML page' do 
     #   it "Determines the right number of passing pages to scrape" do 
     #     scraper = Scraper.new('passing')
@@ -81,22 +81,24 @@ describe Scraper do
     #     expect(scraper.page_quantity).to eq(12)
     #   end
     # end
-    context 'after determining how many pages to find' do 
-      it 'Loops through and adds that amount of pages to @pages array' do 
-        scraper = Scraper.new('passing')
-        scraper.generate_count
-        scraper.get_html_page
-        expect(scraper.pages.count).to eq(scraper.page_quantity)
-      end
-    end
-  end
+  #   context 'after determining how many pages to find' do 
+  #     it 'Loops through and adds that amount of pages to @pages array' do 
+  #       scraper = Scraper.new('passing')
+  #       scraper.generate_count
+  #       scraper.get_html_page
+  #       expect(scraper.pages.count).to eq(scraper.page_quantity)
+  #     end
+  #   end
+  # end
 
   describe "#write_to_file" do 
     context 'if no html_hold directory exists' do 
-      it 'Generates a directory to hold the html files'
+      it 'Can detect that such directory is non-existant' do 
+        expect(Dir.exists?('../html_hold/')).to be(false)
+      end
     end
     context 'if the directory already exists' do 
-      it 'Writes to sterr which file it is writing'
+      it 'Writes to stderr which file it is writing'
       it 'Writes the file to the proper directory'
       it 'Moves on to the next file'
     end
