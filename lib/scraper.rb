@@ -23,23 +23,17 @@ class Scraper
     if BASE_DIR.keys.include?(position.to_sym)
       @position = position
     else
-      raise RuntimeError, "Must be appropriate position (passing, rushing or receiving)"
+      raise "Must be appropriate position (passing, rushing or receiving)"
     end
     @array_of_count = []
     @pages = []
   end
 
-# Generates an array of numbers, counting by how many player records
-# are on each HTML page. Allows other methods to paginate through the 
-# stat pages and collect them all.
-  def generate_count
-    counts = (1..921).step(40) { |i| @array_of_count.push(i) }
-    @array_of_count
-  end
 
 # Access the URL and Nokogiri grabs the HTML, parsing it to determine how many pages need
 # to be scraped for the given position
   def get_html_page
+    generate_count()
     @pages.push(Nokogiri::HTML(open(BASE_URL + BASE_DIR[position.to_sym] + '1')))
     
     results_div = @pages[0].css('#my-players-table div.totalResults').first.content
@@ -62,15 +56,24 @@ class Scraper
     end
   end
 
+# Takes the array @pages and writes each entry to a new file for holding and future data parsing
   def write_to_file
-    unless Dir.exists?('./html_hold/')
+    unless Dir.exist?('./html_hold/')
       Dir.mkdir('./html_hold/')
     end
 
     @pages.each_with_index do |page, i|
       STDERR.puts "Writing page #{i + 1}"
-      File.open("./html_hold/#{position}_#{i}.html", 'w') { |f| f.write(page.to_html) }
-      STDERR.puts "Files in the directory now are:"
+      File.open("./html_hold/#{position}_#{i}.html", 'w') { |f| f.write(page) }
     end
+    STDERR.puts "End of write to pages method"
+  end
+private
+# Generates an array of numbers, counting by how many player records
+# are on each HTML page. Allows other methods to paginate through the 
+# stat pages and collect them all.
+  def generate_count(step_size=40)
+    counts = (1..921).step(step_size) { |i| @array_of_count.push(i) }
+    @array_of_count
   end
 end

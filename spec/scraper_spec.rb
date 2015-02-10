@@ -2,7 +2,7 @@ require 'scraper'
 
 describe Scraper do
   describe "#new" do 
-    context 'initialized WITHOUT an argument' do
+    context 'WITHOUT an argument' do
       it "will raise an ArgumentError" do
         expect { x = Scraper.new }.to raise_error(ArgumentError)
       end
@@ -29,7 +29,7 @@ describe Scraper do
     end
 
     context 'initialized with invalid position value' do
-      it "will raise an error with valid position values" do
+      it "will raise an error, listing valid position values" do
         expect { Scraper.new('nonsense')}.to raise_error(RuntimeError)
       end
     end
@@ -91,17 +91,17 @@ describe Scraper do
   #   end
   # end
 
-  describe "#write_to_file" do 
-    context 'if no html_hold directory exists' do 
-      it 'Can detect that such directory is non-existant' do 
-        expect(Dir.exists?('../html_hold/')).to be(false)
-      end
-    end
-    context 'if the directory already exists' do 
-      it 'Writes to stderr which file it is writing'
-      it 'Writes the file to the proper directory'
-      it 'Moves on to the next file'
-    end
-  end
+  # describe "#write_to_file" do 
+  #   context 'if no html_hold directory exists' do 
+  #     it 'Can detect that such directory is non-existant' do 
+  #       expect(Dir.exists?('../html_hold/')).to be(false)
+  #     end
+  #   end
+  #   context 'if the directory already exists' do 
+  #     it 'Writes to stderr which file it is writing'
+  #     it 'Writes the file to the proper directory'
+  #     it 'Moves on to the next file'
+  #   end
+  # end
 end
 
