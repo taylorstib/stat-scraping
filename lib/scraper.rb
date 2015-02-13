@@ -26,6 +26,7 @@ class Scraper
       raise "Must be appropriate position (passing, rushing or receiving)"
     end
     @array_of_count = []
+    generate_count()
     @pages = []
   end
 
@@ -33,7 +34,7 @@ class Scraper
 # Access the URL and Nokogiri grabs the HTML, parsing it to determine how many pages need
 # to be scraped for the given position
   def get_html_page
-    generate_count()
+    
     @pages.push(Nokogiri::HTML(open(BASE_URL + BASE_DIR[position.to_sym] + '1')))
     
     results_div = @pages[0].css('#my-players-table div.totalResults').first.content

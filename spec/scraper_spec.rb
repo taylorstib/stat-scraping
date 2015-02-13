@@ -38,11 +38,11 @@ describe Scraper do
   describe "#generate_count" do
     it "Generates an array" do
       scraper = Scraper.new('passing')
-      expect(scraper.generate_count).to be_an(Array)
+      expect(scraper.array_of_count).to be_an(Array)
     end
     it "Has the right values counting from 1 to 900 by 40's" do 
       scraper = Scraper.new('passing')
-      expect(scraper.generate_count).to eq([1, 41, 81, 121, 161, 201, 241, 281,
+      expect(scraper.array_of_count).to eq([1, 41, 81, 121, 161, 201, 241, 281,
                                             321, 361, 401, 441, 481, 521, 561,
                                             601, 641, 681, 721, 761, 801, 841, 881, 921])
     end
