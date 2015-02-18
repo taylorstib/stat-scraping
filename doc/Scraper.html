@@ -58,7 +58,7 @@
   <h3>Parent</h3>
 
   
-  <p class="link"><a href="Object.html">Object</a>
+  <p class="link">Object
   
 </div>
 
@@ -72,9 +72,9 @@
     
     <li ><a href="#method-c-new">::new</a>
     
-    <li ><a href="#method-i-generate_count">#generate_count</a>
-    
     <li ><a href="#method-i-get_html_page">#get_html_page</a>
+    
+    <li ><a href="#method-i-write_to_file">#write_to_file</a>
     
   </ul>
 </div>
@@ -89,7 +89,9 @@
 
   <section class="description">
     
-<p>This class scrapes ESPN using Nokogiri for further parsing of the stats</p>
+<p>Scrapes the web using Nokogiri, saves the webpages as a local variable,
+then writes all the pages to html files locally, for further analysis and
+parsing of the stats</p>
 
   </section>
 
@@ -123,6 +125,46 @@
         </div>
       </div>
       
+      <div id="attribute-i-base_dir" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">base_dir</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>All pages after the first have a common pattern and this variable
+encompasses that for each  position</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-base_url" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">base_url</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>Common pattern for all the positions and years</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-first_page_url" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">first_page_url</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>First stat page has a different URL pattern</p>
+        
+        </div>
+      </div>
+      
       <div id="attribute-i-page_quantity" class="method-detail">
         <div class="method-heading attribute-method-heading">
           <span class="method-name">page_quantity</span><span
@@ -131,7 +173,7 @@
 
         <div class="method-description">
         
-        
+        <p>Number of pages for the given position</p>
         
         </div>
       </div>
@@ -144,7 +186,7 @@
 
         <div class="method-description">
         
-        
+        <p>HTML files get pushed to this array before being written to local storage</p>
         
         </div>
       </div>
@@ -157,7 +199,20 @@
 
         <div class="method-description">
         
+        <p>The player position for which you desire stats</p>
         
+        </div>
+      </div>
+      
+      <div id="attribute-i-year" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">year</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>The primary year in which your desired season was played</p>
         
         </div>
       </div>
@@ -176,7 +231,7 @@
         
         <div class="method-heading">
           <span class="method-name">new</span><span
-            class="method-args">(position)</span>
+            class="method-args">(position='receiving', year='2013')</span>
           
           <span class="method-click-advice">click to toggle source</span>
           
@@ -186,22 +241,30 @@
         <div class="method-description">
           
           <p>Initialize the <a href="Scraper.html">Scraper</a> class with the position
-you want stats for. Options include &#39;passing&#39;, &#39;rushing&#39;,
-and &#39;receiving&#39;.</p>
+and year you want stats for. Options include &#39;passing&#39;,
+&#39;rushing&#39;, and &#39;receiving&#39;.</p>
           
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/scraper.rb, line 22</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">position</span>)
-  <span class="ruby-keyword">if</span> <span class="ruby-constant">BASE_DIR</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">position</span>.<span class="ruby-identifier">to_sym</span>)
-    <span class="ruby-ivar">@position</span> = <span class="ruby-identifier">position</span>
-  <span class="ruby-keyword">else</span>
-    <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span>, <span class="ruby-string">&quot;Must be appropriate position (passing, rushing or receiving)&quot;</span>
-  <span class="ruby-keyword">end</span>
+            <pre><span class="ruby-comment"># File lib/scraper.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">position</span>=<span class="ruby-string">&#39;receiving&#39;</span>, <span class="ruby-identifier">year</span>=<span class="ruby-string">&#39;2013&#39;</span>)
+<span class="ruby-comment"># The first page always has a unique URL structure</span>
+  <span class="ruby-ivar">@first_page_url</span> = <span class="ruby-node">&quot;http://espn.go.com/nfl/statistics/player/_/stat/#{position}/year/#{year}/qualified/false&quot;</span>
   <span class="ruby-ivar">@array_of_count</span> = []
   <span class="ruby-ivar">@pages</span> = []
+  <span class="ruby-ivar">@page_quantity</span> = <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-ivar">@year</span> = <span class="ruby-identifier">year</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-ivar">@base_dir</span> = { <span class="ruby-identifier">passing</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;passing/sort/passingYards/year/#{year}/qualified/false/count/&quot;</span>,
+               <span class="ruby-identifier">rushing</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;rushing/sort/rushingYards/year/#{year}/qualified/false/count/&quot;</span>,
+               <span class="ruby-identifier">receiving</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;receiving/sort/receivingYards/year/#{year}/qualified/false/count/&quot;</span>
+            }
+  <span class="ruby-ivar">@position</span> = <span class="ruby-identifier">position</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-comment"># Common URL structure </span>
+  <span class="ruby-ivar">@base_url</span> = <span class="ruby-string">&#39;http://espn.go.com/nfl/statistics/player/_/stat/&#39;</span>
+  <span class="ruby-identifier">generate_count</span>()
+  <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;New Scraper initiated with #{@year} and #{@position}&quot;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -221,42 +284,6 @@ and &#39;receiving&#39;.</p>
        </header>
 
     
-      <div id="method-i-generate_count" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">generate_count</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <p>Generates an array of numbers, counting by how many player records are on
-each HTML page. Allows other methods to paginate through the  stat pages
-and collect them all.</p>
-          
-          
-
-          
-          <div class="method-source-code" id="generate_count-source">
-            <pre><span class="ruby-comment"># File lib/scraper.rb, line 35</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_count</span>
-  <span class="ruby-identifier">counts</span> = (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">921</span>).<span class="ruby-identifier">step</span>(<span class="ruby-value">40</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@array_of_count</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">i</span>) }
-  <span class="ruby-ivar">@array_of_count</span>
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-
-        
-      </div>
-
-    
       <div id="method-i-get_html_page" class="method-detail ">
         
         <div class="method-heading">
@@ -270,26 +297,85 @@ and collect them all.</p>
 
         <div class="method-description">
           
-          <p>Access the URL and Nokogiri grabs the HTML, parsing it to determine how
-many pages need to be scraped for the given position</p>
+          <p>Nokogiri grabs the HTML, parsing it to determine how many pages need to be
+scraped for the given position, then pushes all the corresponding pages  to
+@pages array so that <a
+href="Scraper.html#method-i-write_to_file">#write_to_file</a> can be called</p>
           
           
 
           
           <div class="method-source-code" id="get_html_page-source">
-            <pre><span class="ruby-comment"># File lib/scraper.rb, line 42</span>
+            <pre><span class="ruby-comment"># File lib/scraper.rb, line 53</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_html_page</span>
-  <span class="ruby-ivar">@pages</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">open</span>(<span class="ruby-constant">BASE_URL</span> <span class="ruby-operator">+</span> <span class="ruby-constant">BASE_DIR</span>[<span class="ruby-identifier">position</span>.<span class="ruby-identifier">to_sym</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&#39;1&#39;</span>)))
-  
-  <span class="ruby-identifier">results_div</span> = <span class="ruby-ivar">@pages</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">css</span>(<span class="ruby-string">&#39;#my-players-table div.totalResults&#39;</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">content</span>
-  <span class="ruby-identifier">number_results_arr</span> = <span class="ruby-identifier">results_div</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39; &#39;</span>)
-  <span class="ruby-identifier">number_results</span> = <span class="ruby-identifier">number_results_arr</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">to_i</span>
+    <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Finding page 1&quot;</span>
+    <span class="ruby-ivar">@pages</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@first_page_url</span>)))
+    <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Page 1 Added&quot;</span>
+    <span class="ruby-identifier">results_div</span> = <span class="ruby-ivar">@pages</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">css</span>(<span class="ruby-string">&#39;#my-players-table div.totalResults&#39;</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">content</span>
+    <span class="ruby-identifier">number_results_arr</span> = <span class="ruby-identifier">results_div</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39; &#39;</span>)
+    <span class="ruby-identifier">number_results</span> = <span class="ruby-identifier">number_results_arr</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">to_i</span>
+    <span class="ruby-comment">## Output number of players in results</span>
+    <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;number_results = #{number_results}&quot;</span>
+    <span class="ruby-identifier">sleep</span> <span class="ruby-value">2</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">number_results</span> <span class="ruby-operator">%</span> <span class="ruby-value">40</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+      <span class="ruby-ivar">@page_quantity</span> = <span class="ruby-identifier">number_results</span><span class="ruby-operator">/</span><span class="ruby-value">40</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-ivar">@page_quantity</span> = (<span class="ruby-identifier">number_results</span><span class="ruby-operator">/</span><span class="ruby-value">40</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment">## Test for number of pages to grab</span>
+    <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Page_quantity = #{@page_quantity}&quot;</span>
 
-  <span class="ruby-keyword">if</span> <span class="ruby-identifier">number_results</span> <span class="ruby-operator">%</span> <span class="ruby-value">40</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
-    <span class="ruby-ivar">@page_quantity</span> = <span class="ruby-identifier">number_results</span><span class="ruby-operator">/</span><span class="ruby-value">40</span>
-  <span class="ruby-keyword">else</span>
-    <span class="ruby-ivar">@page_quantity</span> = (<span class="ruby-identifier">number_results</span><span class="ruby-operator">/</span><span class="ruby-value">40</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@page_quantity</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+      <span class="ruby-ivar">@array_of_count</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span>(<span class="ruby-ivar">@page_quantity</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+        <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;== Finding page #{n + 1}&quot;</span>
+        <span class="ruby-ivar">@pages</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Nokogiri</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>(<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@base_url</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;#{@base_dir[@position.to_sym]}&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;#{n}&quot;</span>)))
+        <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;== Page #{n + 1} added\n&quot;</span>
+        <span class="ruby-comment"># Reduce load on server</span>
+        <span class="ruby-identifier">sleep</span> <span class="ruby-identifier">rand</span>(<span class="ruby-value">8</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-write_to_file" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">write_to_file</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Takes the array @pages and writes each entry to a new file for holding and
+future data parsing</p>
+          
+          
+
+          
+          <div class="method-source-code" id="write_to_file-source">
+            <pre><span class="ruby-comment"># File lib/scraper.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">write_to_file</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-node">&quot;./html_hold/#{@year}&quot;</span>)
+    <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-node">&quot;./html_hold/#{@year}&quot;</span>)
   <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@pages</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">page</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Writing page #{i + 1}&quot;</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-node">&quot;./html_hold/#{@year}/#{@position}_#{i}.html&quot;</span>, <span class="ruby-string">&#39;w&#39;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">page</span>) }
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;End of write to pages method&quot;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
