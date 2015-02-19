@@ -91,12 +91,12 @@ describe Scraper do
   #   end
   # end
 
-  describe "#write_to_file" do 
-    context 'if no html_hold directory exists' do 
-      it 'Can detect that such directory is non-existant' do 
-        expect(Dir.exists?('../html_hold/')).to be(false)
-      end
-    end
+  # describe "#write_to_file" do 
+  #   context 'if no html_hold directory exists' do 
+  #     it 'Can detect that such directory is non-existant' do 
+  #       expect(Dir.exists?('./html_hold/')).to be(false)
+  #     end
+  #   end
     context 'if the directory already exists' do 
       it 'Writes to stderr which file it is writing'
       it 'Writes the file to the proper directory'
