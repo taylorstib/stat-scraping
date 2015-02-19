@@ -1,5 +1,4 @@
 module CountGen
-
   # Generates an array of numbers, counting by how many player records
   # are on each HTML page. Allows other methods to paginate through the 
   # stat pages and collect them all.

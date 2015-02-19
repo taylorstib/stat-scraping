@@ -2,13 +2,14 @@ require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
 require 'fileutils'
+require_relative './count_gen.rb'
 
 
 # Scrapes the web using Nokogiri, saves the webpages as a local variable,
 # then writes all the pages to html files locally, for further analysis and parsing
 # of the stats 
 class Scraper
-
+  include CountGen
   # HTML files get pushed to this array before being written to local storage
   attr_accessor :pages
   # Number of pages for the given position
@@ -91,12 +92,12 @@ class Scraper
     end
     STDERR.puts "End of write to pages method"
   end
-private
-# Generates an array of numbers, counting by how many player records
-# are on each HTML page. Allows other methods to paginate through the 
-# stat pages and collect them all.
-  def generate_count(step_size=40)
-    counts = (1..921).step(step_size) { |i| @array_of_count.push(i) }
-    @array_of_count
-  end
+# private
+# # Generates an array of numbers, counting by how many player records
+# # are on each HTML page. Allows other methods to paginate through the 
+# # stat pages and collect them all.
+#   def generate_count(step_size=40)
+#     counts = (1..921).step(step_size) { |i| @array_of_count.push(i) }
+#     @array_of_count
+#   end
 end
