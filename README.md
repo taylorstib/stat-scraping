@@ -1,7 +1,6 @@
 # ESPN stat scraping for nfl
 
-### This branch attempts to make all the code DRY
-To get stats for season 2005 - 2014, run the **init.rb** file. This will generate local copies of HTML pages for all the stats. 
-_Working on getting the stats parsing code DRY-d up._
+init.rb file runs the code directly from the command line. Just run `ruby init.rb` from the root of the directory and the script should proceed to grab and save the HTML pages, and then parse those pages and save the stats to csv. 
 
-The spec/ directory contains passing Rspec tests for the Scraper class, which uses Nokogiri to grab the HTML pages for the designated URLs. 
+
+There might be some trouble running the `write_to_csv` method if the csv directories do not already exist. (Of course cloning or forking this repo directly will have all the csv files and directories) 
