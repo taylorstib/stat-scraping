@@ -1,0 +1,360 @@
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+1,"Arian Foster, RB",HOU,327,"1,616",4.9,74,12,16,101.0,3,89
+2,"Jamaal Charles, RB",KC,230,"1,467",6.4,80,10,5,91.7,2,70
+3,"Michael Turner, RB",ATL,334,"1,371",4.1,55,9,12,85.7,2,71
+4,"Chris Johnson, RB",TEN,316,"1,364",4.3,76,13,11,85.3,2,55
+5,"Maurice Jones-Drew, RB",JAX,299,"1,324",4.4,37,8,5,94.6,2,75
+6,"Adrian Peterson, RB",MIN,283,"1,298",4.6,80,9,12,86.5,1,70
+7,"Rashard Mendenhall, RB",PIT,324,"1,273",3.9,50,11,13,79.6,2,61
+8,"Steven Jackson, RB",STL,330,"1,241",3.8,42,7,6,77.6,1,60
+9,"Ahmad Bradshaw, RB",NYG,276,"1,235",4.5,48,13,8,77.2,7,61
+10,"Ray Rice, RB",BAL,307,"1,220",4.0,50,4,5,76.3,0,51
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+11,"Peyton Hillis, RB",CLE,270,"1,177",4.4,48,5,11,73.6,8,57
+12,"Darren McFadden, RB",OAK,223,"1,157",5.2,57,14,7,89.0,3,45
+13,"Cedric Benson, RB",CIN,321,"1,111",3.5,26,2,7,69.4,7,59
+14,"LeSean McCoy, RB",PHI,207,"1,080",5.2,62,7,7,72.0,1,48
+15,"Matt Forte, RB",CHI,237,"1,069",4.5,68,9,6,66.8,0,42
+16,"BenJarvus Green-Ellis, RB",NE,229,"1,008",4.4,33,4,13,63.0,0,62
+17,"LeGarrette Blount, RB",TB,201,"1,007",5.0,53,10,6,77.5,3,38
+18,"Fred Jackson, RB",BUF,222,927,4.2,39,6,5,57.9,4,42
+19,"LaDainian Tomlinson, RB",NYJ,219,914,4.2,31,5,6,60.9,2,42
+20,"Thomas Jones, RB",KC,245,896,3.7,70,3,6,56.0,3,39
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+21,"Frank Gore, RB",SF,203,853,4.2,64,6,3,77.5,3,42
+22,"Brandon Jacobs, RB",NYG,147,823,5.6,73,10,9,51.4,2,39
+23,"Felix Jones, RB",DAL,185,800,4.3,34,3,1,50.0,1,44
+24,"Knowshon Moreno, RB",DEN,182,779,4.3,35,3,5,59.9,3,34
+25,"Jonathan Stewart, RB",CAR,178,770,4.3,48,5,2,55.0,4,32
+26,"Shonn Greene, RB",NYJ,185,766,4.1,23,1,2,51.1,2,40
+27,"Ryan Torain, RB",WSH,164,742,4.5,54,7,4,74.2,2,35
+28,"Tim Hightower, RB",ARI,153,736,4.8,80,8,5,46.0,4,30
+29,"Mike Tolbert, RB",SD,182,735,4.0,36,6,11,49.0,5,42
+30,"Ronnie Brown, RB",MIA,200,734,3.7,51,1,5,45.9,3,40
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+31,"Chris Ivory, RB",NO,137,716,5.2,55,5,5,59.7,4,44
+32,"Brandon Jackson, RB",GB,190,703,3.7,71,2,3,43.9,1,27
+33,"Ryan Mathews, RB",SD,158,678,4.3,31,4,7,56.5,4,25
+34,"Michael Vick, QB",PHI,100,676,6.8,35,8,9,56.3,4,38
+35,"Ricky Williams, RB",MIA,159,673,4.2,45,3,2,42.1,4,26
+36,"Michael Bush, RB",OAK,158,655,4.1,30,5,8,46.8,0,32
+37,"Marshawn Lynch, RB",BUF/SEA,165,573,3.5,39,5,6,47.8,1,29
+38,"Jahvid Best, RB",DET,171,555,3.2,45,3,4,34.7,1,25
+39,"Danny Woodhead, RB",NE/NYJ,97,547,5.6,36,3,5,39.1,1,23
+40,"Justin Forsett, RB",SEA,118,523,4.4,32,5,2,32.7,0,25
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+41,"Donald Brown, RB",IND,129,497,3.9,49,4,2,38.2,0,26
+42,"Joseph Addai, RB",IND,116,495,4.3,46,1,4,61.9,2,31
+43,"Rashad Jennings, RB",JAX,84,459,5.5,74,1,4,35.3,0,25
+44,"Mike Goodson, RB",CAR,103,452,4.4,45,3,3,28.3,4,20
+45,"Cadillac Williams, RB",TB,125,437,3.5,45,3,2,27.3,1,19
+46,"Beanie Wells, RB",ARI,116,397,3.4,24,1,2,30.5,1,18
+47,"Willis McGahee, RB",BAL,100,380,3.8,30,3,5,25.3,2,18
+48,"Marion Barber, RB",DAL,113,374,3.3,25,3,4,28.8,0,29
+49,"Josh Freeman, QB",TB,68,364,5.4,33,2,0,22.8,2,29
+50,"DeAngelo Williams, RB",CAR,87,361,4.1,39,4,1,60.2,1,12
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+51,"Aaron Rodgers, QB",GB,64,356,5.6,27,1,4,23.7,2,22
+52,"Brian Westbrook, RB",SF,77,340,4.4,30,1,4,24.3,0,17
+53,"Maurice Morris, RB",DET,90,336,3.7,26,1,5,24.0,1,19
+54,"Jason Snelling, FB",ATL,87,324,3.7,30,1,2,23.1,1,21
+55,"Toby Gerhart, RB",MIN,81,322,4.0,21,1,1,21.5,1,13
+56,"Derrick Ward, RB",HOU,50,315,6.3,38,3,4,19.7,0,17
+57,"Brad Smith, WR",NYJ,38,299,7.9,53,4,1,18.7,1,12
+ ,"Bernard Scott, RB",CIN,61,299,4.9,18,0,1,18.7,0,16
+59,"C.J. Spiller, RB",BUF,74,283,3.8,20,1,0,20.2,2,10
+60,"John Kuhn, RB",GB,84,281,3.3,18,0,4,17.6,1,26
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+61,"David Garrard, QB",JAX,66,279,4.2,25,3,5,19.9,5,28
+62,"Ryan Fitzpatrick, QB",BUF,40,269,6.7,22,2,0,20.7,4,13
+ ,"Pierre Thomas, RB",NO,83,269,3.2,16,0,2,44.8,0,19
+64,"Chester Taylor, RB",CHI,112,267,2.4,24,1,3,16.7,0,16
+ ,"Darren Sproles, RB",SD,50,267,5.3,34,3,0,16.7,1,10
+66,"Keiland Williams, RB",WSH,65,261,4.0,32,2,3,17.4,0,14
+67,"Isaac Redman, RB",PIT,52,247,4.8,23,1,0,15.4,1,21
+68,"Tashard Choice, RB",DAL,66,243,3.7,26,2,3,15.2,0,14
+69,"Jerome Harrison, RB",CLE/PHI,40,239,6.0,50,3,1,29.9,1,9
+ ,"Javon Ringer, RB",TEN,51,239,4.7,54,1,2,14.9,0,10
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+71,"Boobie Dixon, RB",SF,70,237,3.4,34,1,2,14.8,0,11
+72,"Jay Cutler, QB",CHI,50,232,4.6,25,1,1,15.5,1,15
+73,"Clinton Portis, RB",WSH,54,227,4.2,27,1,2,45.4,0,12
+ ,"Tim Tebow, QB",DEN,43,227,5.3,40,2,6,25.2,1,12
+75,"Jason Campbell, QB",OAK,47,222,4.7,24,3,1,17.1,2,13
+76,"Julius Jones, RB",NO/SEA,48,193,4.0,54,1,0,19.3,1,9
+77,"Joe McKnight, RB",NYJ,39,189,4.8,18,0,0,21.0,0,7
+78,"Mike Hart, RB",IND,43,185,4.3,35,1,1,26.4,0,10
+79,"Ben Roethlisberger, QB",PIT,34,176,5.2,31,2,2,14.7,3,15
+80,"Dominic Rhodes, RB",IND,37,172,4.6,15,0,0,57.3,1,8
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+81,"Marshawn Lynch, RB",BUF/SEA,37,164,4.4,17,0,0,41.0,1,9
+82,"Deji Karim, RB",JAX,35,160,4.6,15,0,0,14.5,1,8
+83,"Lance Ball, RB",DEN,41,158,3.9,19,0,0,15.8,1,8
+84,"Fred Taylor, RB",NE,43,155,3.6,24,1,0,22.1,0,9
+ ,"Jacoby Ford, WR",OAK,10,155,15.5,71,2,2,9.7,0,7
+86,"Donovan McNabb, QB",WSH,29,151,5.2,36,2,0,11.6,3,8
+87,"Ladell Betts, RB",NO,45,150,3.3,12,0,2,18.8,1,11
+ ,"Reggie Bush, RB",NO,36,150,4.2,23,1,0,18.8,0,6
+89,"Jon Kitna, QB",DAL,31,147,4.7,29,1,1,14.7,2,6
+ ,"Correll Buckhalter, RB",DEN,59,147,2.5,13,0,2,9.8,1,10
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+91,"Colt McCoy, QB",CLE,28,136,4.9,18,0,1,17.0,0,10
+92,"Kevin Smith, RB",DET,34,133,3.9,15,0,0,22.2,0,5
+93,"Matt Cassel, QB",KC,33,125,3.8,23,1,0,8.3,1,5
+ ,"Vince Young, QB",TEN,25,125,5.0,20,1,0,13.9,3,6
+95,"Shaun Hill, QB",DET,22,123,5.6,40,1,0,11.2,2,8
+96,"Matt Ryan, QB",ATL,46,122,2.7,20,1,0,7.6,1,9
+ ,"Marcel Reece, RB",OAK,30,122,4.1,31,1,1,7.6,1,9
+98,"Troy Smith, QB",SF,23,121,5.3,16,0,1,20.2,3,9
+99,"Joe Webb, QB",MIN,18,120,6.7,16,0,2,24.0,0,7
+100,"Mike Thomas, WR",JAX,12,114,9.5,33,2,0,7.1,0,5
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+101,"Drew Stanton, QB",DET,18,113,6.3,20,1,1,18.8,0,8
+ ,"LaRod Stephens-Howling, RB",ARI,23,113,4.9,30,2,1,8.7,0,5
+103,"Javarris James, RB",IND,46,112,2.4,11,0,6,11.2,0,9
+104,"Kenneth Darby, RB",STL,34,107,3.1,13,0,2,7.6,0,7
+ ,"Percy Harvin, WR",MIN,18,107,5.9,17,0,1,7.6,0,7
+106,"Mark Sanchez, QB",NYJ,30,105,3.5,20,1,3,6.6,4,11
+107,"DeSean Jackson, WR",PHI,16,104,6.5,31,1,1,7.4,0,5
+108,"James Starks, RB",GB,29,101,3.5,16,0,0,33.7,0,5
+109,"Leon Washington, RB",SEA,27,100,3.7,21,1,1,6.3,0,5
+110,"Earnest Graham, RB",TB,20,99,5.0,61,1,1,8.3,1,5
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+ ,"Mewelde Moore, RB",PIT,33,99,3.0,18,0,0,6.6,0,4
+112,"Kyle Orton, QB",DEN,22,98,4.5,14,0,0,7.5,3,9
+113,"Stefan Logan, WR",DET,15,95,6.3,21,1,0,5.9,0,5
+ ,"Dimitri Nance, RB",GB,36,95,2.6,11,0,0,7.9,0,4
+115,"Miles Austin, WR",DAL,7,93,13.3,60,2,1,5.8,0,3
+ ,"Steve Slaton, RB",HOU,19,93,4.9,23,1,0,7.8,0,4
+117,"Jerome Harrison, RB",CLE/PHI,31,91,2.9,39,1,0,22.8,1,3
+118,"Le'Ron McClain, FB",BAL,28,85,3.0,16,0,0,5.7,0,15
+119,"Joe Flacco, QB",BAL,43,84,2.0,14,0,1,5.3,2,10
+120,"Nate Burleson, WR",DET,7,81,11.6,25,2,0,5.8,0,5
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+121,"Danny Amendola, WR",STL,7,81,11.6,30,2,0,5.1,0,4
+122,"Michael Robinson, FB",SEA,12,77,6.4,17,0,0,7.0,0,9
+123,"Jerome Felton, RB",DET,22,76,3.5,9,0,0,4.8,1,3
+124,"Laurence Maroney, RB",DEN,36,74,2.1,13,0,0,18.5,1,1
+ ,"Stephen McGee, QB",DAL,13,74,5.7,14,0,0,37.0,1,4
+126,"Tyler Thigpen, QB",MIA,13,73,5.6,12,0,0,14.6,1,3
+ ,"D.J. Ware, RB",NYG,20,73,3.7,14,0,0,5.2,0,7
+128,"Mike Bell, RB",CLE/PHI,31,71,2.3,11,0,0,6.5,1,6
+ ,"Tyrell Sutton, RB",CAR,13,71,5.5,32,1,0,7.9,0,2
+ ,"Dexter McCluster, WR",KC,18,71,3.9,20,1,0,6.5,1,6
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+131,"Eli Manning, QB",NYG,32,70,2.2,16,0,0,4.4,2,4
+132,"Reggie Hodges, P",CLE,1,68,68.0,68,1,0,4.3,0,1
+133,"Eldra Buckley, RB",PHI,21,67,3.2,13,0,0,4.2,0,4
+134,"Joshua Cribbs, WR",CLE,20,66,3.3,19,0,0,4.4,1,5
+135,"Kevin Kolb, QB",PHI,15,65,4.3,19,0,0,9.3,1,6
+136,"Tarvaris Jackson, QB",MIN,7,63,9.0,33,1,0,21.0,1,3
+ ,"Sam Bradford, QB",STL,27,63,2.3,17,0,1,3.9,1,6
+138,"Lousaka Polite, FB",MIA,26,62,2.4,4,0,1,3.9,0,15
+ ,"Brandon Tate, WR",NE,5,62,12.4,22,1,0,3.9,0,3
+140,"Brian Leonard, RB",CIN,9,61,6.8,42,1,0,5.5,0,4
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+ ,"Eddie Royal, WR",DEN,6,61,10.2,20,1,0,3.8,1,4
+142,"Matt Hasselbeck, QB",SEA,23,60,2.6,20,1,3,4.3,1,8
+ ,"Alex Smith, QB",SF,18,60,3.3,12,0,0,5.5,0,3
+ ,"Jacob Hester, RB",SD,26,60,2.3,6,0,0,4.0,0,9
+ ,"Brandon LaFell, WR",CAR,1,60,60.0,60,1,0,4.3,0,1
+146,"Aaron Brown, RB",DET,17,58,3.4,9,0,0,9.7,0,2
+147,"Jimmy Clausen, QB",CAR,23,57,2.5,11,0,0,4.4,7,2
+148,"Sammy Morris, RB",NE,20,56,2.8,9,0,0,3.5,0,6
+149,"Keith Toston, RB",STL,19,54,2.8,10,0,0,3.4,0,2
+150,"Philip Rivers, QB",SD,29,52,1.8,14,0,0,3.3,3,6
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+ ,"Chad Henne, QB",MIA,35,52,1.5,10,0,0,3.5,4,5
+152,"James Davis, RB",CLE/WSH,15,51,3.4,14,0,0,17.0,0,1
+153,"Carson Palmer, QB",CIN,32,50,1.6,9,0,0,3.1,4,6
+ ,"Jackie Battle, RB",KC,20,50,2.5,7,0,1,3.1,0,7
+155,"John Skelton, QB",ARI,10,49,4.9,16,0,0,9.8,1,3
+156,"Darrius Heyward-Bey, WR",OAK,4,48,12.0,30,1,0,3.2,1,2
+157,"Aaron Hernandez, TE",NE,3,47,15.7,18,0,0,3.4,0,3
+158,"Kevin Faulk, RB",NE,8,45,5.6,11,0,0,22.5,0,1
+ ,"Donte' Stallworth, WR",BAL,5,45,9.0,19,0,0,5.6,1,2
+ ,"Ryan Grant, RB",GB,8,45,5.6,18,0,0,45.0,0,2
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+161,"John Conner, RB",NYJ,8,44,5.5,16,0,1,2.8,0,2
+162,"Charlie Whitehurst, QB",SEA,20,43,2.2,9,0,1,7.2,1,4
+ ,"Louis Murphy, WR",OAK,1,43,43.0,43,1,0,3.1,0,1
+164,"Bruce Gradkowski, QB",OAK,12,41,3.4,12,0,0,6.8,0,2
+165,"Josh Johnson, QB",TB,4,39,9.8,14,0,0,3.5,0,3
+ ,"Mike Wallace, WR",PIT,5,39,7.8,19,0,0,2.4,0,2
+167,"Tony Romo, QB",DAL,6,38,6.3,14,0,0,6.3,0,2
+168,"Ovie Mughelli, FB",ATL,13,36,2.8,6,0,0,2.3,0,7
+ ,"Gartrell Johnson, RB",ATL,10,36,3.6,23,1,0,4.0,0,2
+ ,"Jeremy Maclin, WR",PHI,3,36,12.0,14,0,0,2.3,0,3
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+171,"Steve Breaston, WR",ARI,3,35,11.7,17,0,0,2.7,0,2
+ ,"Arrelious Benn, WR",TB,6,35,5.8,17,0,0,2.3,0,2
+173,"Trent Edwards, QB",BUF/JAX,9,34,3.8,14,0,0,11.3,0,6
+174,"Calvin Johnson, WR",DET,4,32,8.0,15,0,0,2.1,0,2
+ ,"Dennis Dixon, QB",PIT,5,32,6.4,21,1,0,16.0,1,1
+176,"Charlie Batch, QB",PIT,7,30,4.3,24,1,0,10.0,2,2
+ ,"Tom Brady, QB",NE,31,30,1.0,9,0,1,1.9,1,10
+ ,"Julius Jones, RB",NO/SEA,12,30,2.5,6,0,0,15.0,0,0
+ ,"Devin Hester, WR",CHI,7,30,4.3,11,0,0,1.9,0,2
+180,"Albert Young, RB",MIN,13,29,2.2,6,0,0,9.7,0,1
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+ ,"Chad Hall, WR",PHI,9,29,3.2,8,0,0,3.6,0,3
+182,"Matt Schaub, QB",HOU,22,28,1.3,8,0,0,1.8,2,7
+ ,"Jason Wright, RB",ARI,6,28,4.7,10,0,0,1.9,0,3
+ ,"Mike Bell, RB",CLE/PHI,16,28,1.8,9,0,0,5.6,0,0
+ ,"Brandon Gibson, WR",STL,3,28,9.3,14,0,0,2.0,0,2
+ ,"Jonathan Dwyer, RB",PIT,9,28,3.1,7,0,0,28.0,0,0
+187,"Brian Hartline, WR",MIA,2,27,13.5,30,1,0,2.3,0,1
+188,"Matt Flynn, QB",GB,9,26,2.9,12,0,0,3.7,0,2
+189,"Derek Anderson, QB",ARI,5,25,5.0,11,0,0,2.1,1,2
+ ,"Matt Moore, QB",CAR,5,25,5.0,8,0,0,4.2,0,1
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+191,"Trent Edwards, QB",BUF/JAX,5,24,4.8,8,0,0,12.0,0,1
+192,"Roscoe Parrish, WR",BUF,3,23,7.7,13,0,0,2.9,0,2
+193,"Rock Cartwright, RB",OAK,9,22,2.4,10,0,0,1.4,0,1
+ ,"Tony Fiammetta, FB",CAR,7,22,3.1,11,0,0,1.6,0,4
+195,"Darrel Young, FB",WSH,4,19,4.8,16,0,0,1.2,0,1
+196,"Peyton Manning, QB",IND,18,18,1.0,27,1,0,1.1,1,2
+ ,"Kyle Boller, QB",OAK,7,18,2.6,15,0,0,3.6,1,1
+ ,"Delanie Walker, TE",SF,3,18,6.0,10,0,0,1.3,0,1
+ ,"Quinton Ganther, RB",BUF/SEA,9,18,2.0,11,0,0,2.3,0,1
+ ,"Spencer Larsen, FB",DEN,3,18,6.0,14,0,0,1.6,0,3
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+201,"Santonio Holmes, WR",NYJ,2,17,8.5,14,0,0,1.4,2,0
+ ,"Ben Obomanu, WR",SEA,2,17,8.5,13,0,0,1.1,0,1
+ ,"Steve Weatherford, P",NYJ,1,17,17.0,17,0,0,1.1,0,0
+ ,"Thomas Clayton, RB",CLE/NE,6,17,2.8,5,0,0,17.0,0,1
+ ,"Josh Morgan, WR",SF,2,17,8.5,13,0,0,1.1,0,2
+ ,"Chris Gronkowski, RB",DAL,5,17,3.4,8,0,0,1.2,0,2
+207,"Chase Daniel, QB",NO,2,16,8.0,16,0,0,1.2,1,1
+ ,"Marlon Moore, WR",MIA,1,16,16.0,16,0,0,1.8,0,1
+209,"David Reed, WR",BAL,1,15,15.0,15,0,0,1.2,0,1
+210,"Vincent Jackson, WR",SD,1,14,14.0,14,0,0,2.8,0,1
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+ ,"Robert Meachem, WR",NO,4,14,3.5,8,0,0,0.9,0,1
+ ,"Julian Edelman, WR",NE,2,14,7.0,13,0,0,0.9,0,1
+213,"Tony Richardson, FB",NYJ,5,13,2.6,4,0,0,0.8,0,3
+214,"Mike Karney, FB",STL,6,12,2.0,4,0,0,1.0,0,3
+215,"Michael Bennett, RB",OAK,2,11,5.5,6,0,0,1.6,0,0
+ ,"Lawrence Vickers, FB",CLE,5,11,2.2,3,0,0,0.7,0,2
+ ,"Ted Ginn, WR",SF,2,11,5.5,9,0,0,0.8,0,0
+ ,"Matthew Stafford, QB",DET,4,11,2.8,9,0,1,3.7,1,1
+ ,"Curtis Brinkley, RB",SD,2,11,5.5,9,0,0,3.7,0,1
+ ,"Kareem Huggins, RB",TB,4,11,2.8,7,0,0,3.7,0,0
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+221,"Andre Johnson, WR",HOU,2,10,5.0,7,0,0,0.8,0,0
+222,"Steve Smith Sr., WR",CAR,1,9,9.0,9,0,0,0.6,0,1
+ ,"Seneca Wallace, QB",CLE,7,9,1.3,6,0,0,1.1,1,1
+ ,"Kellen Clemens, QB",NYJ,2,9,4.5,10,0,1,9.0,0,1
+ ,"Chansi Stuckey, WR",CLE,3,9,3.0,11,0,1,0.6,0,1
+ ,"Earl Bennett, WR",CHI,2,9,4.5,5,0,0,0.6,0,1
+ ,"James Davis, RB",CLE/WSH,4,9,2.3,4,0,0,2.3,0,0
+ ,"Zach Miller, TE",JAX,2,9,4.5,8,0,0,0.6,0,0
+ ,"Carlton Mitchell, WR",CLE,1,9,9.0,9,0,0,1.8,0,0
+230,"Brett Favre, QB",MIN,17,8,0.5,10,0,0,0.6,4,1
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+ ,"Todd Bouman, QB",JAX,2,8,4.0,6,0,0,8.0,0,1
+ ,"Devery Henderson, WR",NO,3,8,2.7,9,0,0,0.5,0,1
+ ,"Jerious Norwood, RB",ATL,2,8,4.0,6,0,0,4.0,0,1
+ ,"Garrett Wolfe, RB",CHI,4,8,2.0,7,0,0,0.5,0,0
+235,"Jacoby Jones, WR",HOU,2,7,3.5,10,0,0,0.5,0,1
+ ,"Armanti Edwards, WR",CAR,1,7,7.0,7,0,0,2.3,0,0
+ ,"Preston Parker, WR",TB,1,7,7.0,7,0,0,0.8,0,0
+ ,"Josh Vaughan, RB",CAR,3,7,2.3,6,0,1,2.3,0,1
+239,"Rex Grossman, QB",WSH,3,6,2.0,5,0,0,1.5,0,0
+ ,"Kevin Curtis, WR",MIA,1,6,6.0,6,0,0,3.0,0,0
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+241,"Brandon Banks, WR",WSH,2,6,3.0,3,0,0,0.5,0,0
+ ,"Mark Clayton, WR",STL,1,6,6.0,6,0,0,1.2,0,0
+ ,"Pierre Garcon, WR",IND,2,6,3.0,11,0,0,0.4,0,1
+ ,"Deon Butler, WR",SEA,2,6,3.0,4,0,0,0.5,0,0
+245,"Jay Feely, PK",ARI,1,5,5.0,5,0,1,0.3,0,1
+ ,"Corey McIntyre, FB",BUF,4,5,1.3,2,0,1,0.3,0,3
+ ,"Tyler Palko, QB",KC,2,5,2.5,6,0,0,2.5,0,1
+ ,"Early Doucet, WR",ARI,2,5,2.5,3,0,0,0.5,0,1
+ ,"Jordan Senn, LB",CAR,1,5,5.0,5,0,0,0.4,0,1
+ ,"Damian Williams, WR",TEN,1,5,5.0,5,0,0,0.3,0,0
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+ ,"Javier Arenas, DB",KC,1,5,5.0,5,0,0,0.3,0,0
+252,"Greg Jones, RB",JAX,2,4,2.0,3,0,0,0.3,0,0
+ ,"Luke McCown, QB",JAX,1,4,4.0,4,0,0,4.0,0,0
+ ,"Braylon Edwards, WR",NYJ,1,4,4.0,4,0,0,0.3,0,0
+ ,"Dwayne Bowe, WR",KC,1,4,4.0,4,0,0,0.3,0,0
+ ,"Golden Tate, WR",SEA,2,4,2.0,3,0,0,0.4,0,0
+257,"Roddy White, WR",ATL,1,3,3.0,3,0,0,0.2,0,0
+ ,"Brandon Marshall, WR",MIA,2,3,1.5,4,0,0,0.2,0,0
+ ,"Tim Castille, RB",KC,5,3,0.6,3,0,0,0.3,0,0
+ ,"Jimmy Graham, TE",NO,1,3,3.0,3,0,0,0.2,0,1
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+ ,"Naaman Roosevelt, WR",BUF,1,3,3.0,3,0,0,0.5,0,0
+262,"Mike Sellers, FB",WSH,4,2,0.5,1,0,0,0.1,0,1
+ ,"Heath Evans, FB",NO,2,2,1.0,2,0,0,0.1,0,0
+ ,"Antwaan Randle El, WR",PIT,1,2,2.0,2,0,0,0.1,0,0
+ ,"Larry Johnson, RB",WSH,5,2,0.4,7,0,0,1.0,0,0
+ ,"Anquan Boldin, WR",BAL,2,2,1.0,3,0,0,0.1,0,0
+ ,"Jeff Dugan, TE",MIN,2,2,1.0,2,0,0,0.1,0,1
+ ,"Jerome Simpson, WR",CIN,1,2,2.0,2,0,0,0.4,0,0
+ ,"Mario Manningham, WR",NYG,1,2,2.0,2,0,0,0.1,0,0
+ ,"Jehuu Caulcrick, FB",BUF,1,2,2.0,2,0,0,1.0,0,1
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+ ,"Sammie Stroughter, WR",TB,1,2,2.0,2,0,0,0.2,0,1
+ ,"Johnny Knox, WR",CHI,1,2,2.0,2,0,0,0.1,0,0
+ ,"David Gettis, WR",CAR,3,2,0.7,19,0,0,0.1,0,1
+274,"Kerry Collins, QB",TEN,10,1,0.1,4,0,0,0.1,2,1
+ ,"Brian Moorman, P",BUF,2,1,0.5,1,0,0,0.1,0,0
+ ,"Shaun Smith, DT",KC,1,1,1.0,1,0,1,0.1,0,1
+ ,"Marques Colston, WR",NO,1,1,1.0,1,0,0,0.1,0,0
+ ,"Ahmard Hall, FB",TEN,1,1,1.0,1,0,0,0.1,0,1
+ ,"Naufahu Tahi, FB",MIN,1,1,1.0,1,0,0,0.1,0,1
+ ,"Cedric Peerman, RB",CIN,2,1,0.5,1,0,0,0.1,0,0
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+281,"Demaryius Thomas, WR",DEN,2,1,0.5,1,0,0,0.1,1,0
+ ,"Donald Jones, WR",BUF,3,1,0.3,2,0,0,0.1,0,0
+283,"Josh Bidwell, P",WSH,1,0,0.0,0,0,0,0.0,1,0
+ ,"Moran Norris, RB",SF,3,0,0.0,1,0,0,0.0,0,0
+ ,"Jason Baker, P",CAR,1,0,0.0,0,0,0,0.0,0,0
+ ,"Mat McBriar, P",DAL,1,0,0.0,0,0,0,0.0,1,0
+ ,"Mike Williams, WR",SEA,1,0,0.0,0,0,0,0.0,0,0
+ ,"Leonard Weaver, FB",PHI,1,0,0.0,0,0,0,0.0,0,0
+ ,"Sam Koch, P",BAL,1,0,0.0,0,0,0,0.0,1,0
+ ,"Patrick Cobbs, RB",MIA,4,0,0.0,4,0,0,0.0,0,0
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+ ,"Samson Satele, C",OAK,1,0,0.0,0,0,0,0.0,1,0
+ ,"Thomas Clayton, RB",CLE/NE,1,0,0.0,0,0,0,0.0,0,0
+ ,"Brett Kern, P",TEN,1,0,0.0,0,0,0,0.0,0,0
+ ,"Kregg Lumpkin, RB",TB,1,0,0.0,0,0,0,0.0,0,0
+ ,"Britton Colquitt, P",DEN,1,0,0.0,0,0,0,0.0,0,0
+ ,"Chris Pressley, FB",CIN/TB,1,0,0.0,0,0,0,0.0,0,0
+ ,"Dez Bryant, WR",DAL,1,0,0.0,0,0,0,0.0,0,0
+ ,"Matt Dodge, P",NYG,1,0,0.0,0,0,0,0.0,1,0
+299,"Chris Redman, QB",ATL,1,-1,-1.0,-1,0,0,-0.5,0,0
+ ,"Benjamin Watson, TE",CLE,1,-1,-1.0,-1,0,0,-0.1,0,0
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+ ,"Greg Jennings, WR",GB,1,-1,-1.0,-1,0,0,-0.1,0,0
+ ,"Caleb Hanie, QB",CHI,1,-1,-1.0,-1,0,0,-0.5,0,0
+ ,"Andre Brown, RB",DEN/IND,2,-1,-0.5,0,0,0,-0.3,0,0
+304,"Hines Ward, WR",PIT,1,-2,-2.0,-2,0,0,-0.1,0,0
+ ,"Jake Delhomme, QB",CLE,8,-2,-0.3,2,0,0,-0.4,1,1
+ ,"Dante Rosario, TE",CAR,1,-2,-2.0,-2,0,0,-0.1,0,0
+ ,"Legedu Naanee, WR",SD,3,-2,-0.7,5,0,0,-0.2,0,0
+ ,"Andre Caldwell, WR",CIN,1,-2,-2.0,-2,0,0,-0.1,0,0
+ ,"Devin Moore, RB",IND,2,-2,-1.0,1,0,0,-0.5,1,0
+310,"Drew Brees, QB",NO,18,-3,-0.2,7,0,0,-0.2,0,1
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+ ,"Sage Rosenfels, QB",NYG,3,-3,-1.0,0,0,0,-0.3,0,0
+ ,"Jerricho Cotchery, WR",NYJ,4,-3,-0.8,4,0,0,-0.2,0,0
+ ,"Davone Bess, WR",MIA,2,-3,-1.5,0,0,0,-0.2,0,0
+ ,"Mohamed Massaquoi, WR",CLE,1,-3,-3.0,-3,0,0,-0.2,0,0
+ ,"Antone Smith, RB",ATL,1,-3,-3.0,-3,0,0,-0.3,0,0
+316,"Yamon Figurs, WR",CLE/OAK,1,-4,-4.0,-4,0,0,-4.0,0,0
+317,"Billy Volek, QB",SD,6,-5,-0.8,0,0,0,-1.7,0,0
+ ,"Harry Douglas, WR",ATL,2,-5,-2.5,0,0,0,-0.3,0,0
+ ,"Max Hall, QB",ARI,1,-5,-5.0,-5,0,0,-0.8,0,0
+320,"Santana Moss, WR",WSH,5,-6,-1.2,7,0,0,-0.4,0,0
+RK,PLAYER,TEAM,ATT,YDS,YDS/A,LONG,20+,TD,YDS/G,FUM,1DN
+321,"Bernard Berrian, WR",MIN,1,-8,-8.0,-8,0,0,-0.6,0,0
+ ,"Nate Washington, WR",TEN,1,-8,-8.0,-8,0,0,-0.5,0,0
+ ,"Brian Hoyer, QB",NE,10,-8,-0.8,1,0,0,-1.6,0,0
+324,"Jon Ryan, P",SEA,1,-9,-9.0,-9,0,0,-0.6,0,0
+325,"Laurent Robinson, WR",STL,2,-14,-7.0,-5,0,0,-1.0,0,0
+326,"Brandon Lloyd, WR",DEN,1,-18,-18.0,-18,0,0,-1.1,0,0
+327,"Matt Turk, P",HOU,1,-27,-27.0,-27,0,0,-1.7,0,0
