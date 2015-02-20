@@ -1,12 +1,7 @@
-#ESPN stat scraping for nfl
-Scrape.rb grabs the pages
-pull_data.rb pages format the stats into a neat csv file. 
-- Use the pull_data method that corresponds to the stat category you are interested in (passing, receiving, rushing)
-- Receiving limits stats for top 240 receivers. (Working on making the whole thing dynamic so user can specify how many records are needed)
+# ESPN stat scraping for nfl
 
+### This branch attempts to make all the code DRY
+To get stats for season 2005 - 2014, run the **init.rb** file. This will generate local copies of HTML pages for all the stats. 
+_Working on getting the stats parsing code DRY-d up._
 
-### Work in progress
-- Want to make it a single pull_data script (check issues for specifics)
-- Turn it into a gem
-- Have the data hold pages labeled for the given season and week number
-- Ability to scrabe past seasons??
+The spec/ directory contains passing Rspec tests for the Scraper class, which uses Nokogiri to grab the HTML pages for the designated URLs. 
