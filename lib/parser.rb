@@ -23,15 +23,15 @@ class Parser
       if File.exist?("./html_hold/#{@year}/#{@position}_#{n}.html")
         page = Nokogiri::HTML(open("./html_hold/#{@year}/#{@position}_#{n}.html"))
         @pages.push(page)
-        STDERR.puts "Pushed page #{n}"
       else
-        STDERR.puts "BREAKING"
         break
       end
     end
     puts "=== #open_pages ran ===\n\n"
   end
 
+# Makes sure the row_length variable is set to the proper number so the page can be parsed
+# correctly for each position
   def row_length
     case @position
     when 'passing'
@@ -41,26 +41,35 @@ class Parser
     when 'receiving'
       @row_length = 14
     end
-    STDERR.puts "Row-Length = #{@row_length}"
     STDERR.puts "=== #row_length ran ===\n\n"
   end
 
   def write_to_csv
-    holding_array = []
-    arr_of_arrs = []
     CSV.open("./csv_hold/#{@year}/#{@position}.csv", 'w') do |csv|
-      @pages.each do |pg|
-        pg.css('#my-players-table td').each do |item|
-          holding_array.push(item.content)
-        end
-        until holding_array.length == 0
-          arr_of_arrs.push(holding_array.slice!(0..(@row_length-1)))
+      @pages.each do |page|
+        arr = []
+        page.css('#my-players-table td').each_with_index do |el, i|
+          if i == page.css('#my-players-table td').length - 1
+            arr.push(el.content)
+            csv << arr
+          elsif i == 0
+            arr.push(el.content)
+          elsif (i % @row_length) == 0
+            csv << arr
+            arr = []
+            arr.push(el.content)
+          elsif ((i % @row_length) == 1) && (el.content.length > 4)
+            name = el.content.split("\n")
+            name.delete_at(0) if name.length > 1
+            name_array = name[0].split("\n")
+            arr.push(name_array.join(' '))
+            arr.push(name[1].strip) unless name[1].nil?
+          else
+            arr.push(el.content)
+          end
         end
       end
-      arr_of_arrs.flatten!
-      csv << arr_of_arrs
     end
     STDERR.puts "=== #write_to_csv ran ===\n\n"
   end
-
 end  # End of Parser class
