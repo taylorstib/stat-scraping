@@ -2,7 +2,7 @@ require_relative './lib/scraper.rb'
 require_relative './lib/parser.rb'
 require_relative './lib/csvtojson.rb'
 
-years = (2005..2014)
+years = (2002..2014)
 
 # methods below are for grabbing the html pages if
 # not in the html_hold directory already
@@ -38,7 +38,12 @@ years = (2005..2014)
 #   rec.write_to_csv
 # end
 
+years.each_with_index do |yr, i|
+  pass = Parser.new('passing', yr)
+  pass.del_dups
+  rush = Parser.new('rushing', yr)
+  rush.del_dups
+  rec = Parser.new('receiving', yr)
+  rec.del_dups
+end
 
-parser = Jsonifier.new
-parser.open_csv('./csv_hold/2014/passing.csv')
-parser.write_json('./json_hold/2014/passing.json')
