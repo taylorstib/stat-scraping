@@ -72,4 +72,27 @@ class Parser
     end
     STDERR.puts "=== #write_to_csv ran ===\n\n"
   end
+
+  # Deletes the duplicate values that are found every 10 rows
+  def del_dups
+    row_length
+    row_array = []
+    CSV.open("./csv_hold/#{@year}/#{@position}_clean.csv", 'w') do |csv| 
+      CSV.foreach("./csv_hold/#{@year}/#{@position}.csv") do |row|
+        row.each_with_index do |itm, i|
+          if i == @row_length - 1
+            row_array.push(itm)
+            csv << row_array
+            row_array = []
+          elsif i > 0
+            row_array.push(itm)
+          elsif i == 0
+          end
+        end
+      end
+    end
+      STDERR.puts "=== #del_dups ran ===\n\n"
+  end
+
+
 end  # End of Parser class
