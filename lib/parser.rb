@@ -97,26 +97,21 @@ class Parser
   # Deletes the extra header labels that originally appear every 10 rows
   def delete_extra_headers
     count = 0
-    CSV.foreach("./csv_hold/#{@year}/#{@position}_clean.csv") do |row|
-      if ((row[0] == "PLAYER") && (count > 0))
-        puts "#{row} ==> should delete #{count}"
-        count = count + 1
-      elsif row[0] == "PLAYER"
-        count += 1
-        puts "#{row}"
-      else
-        puts "#{row}"
+    CSV.open("./csv_hold/clean/#{@year}_#{@position}.csv", "w") do |csv|
+      CSV.foreach("./csv_hold/#{@year}/#{@position}_clean.csv") do |row|
+        if ((row[0] == "PLAYER") && (count > 0))
+          #puts "#{row} ==> should delete #{count}"
+          count = count + 1
+        elsif row[0] == "PLAYER"
+          count += 1
+          csv << row
+          # puts "#{row}"
+        else
+          csv << row
+          # puts "#{row}"
+        end
       end
-
-      # if count < 11 && initial_set == 0
-      #   puts "#{row} -->> #{count}"
-      #   count += 1
-      # elsif count == 11 && initial_set == 0
-      #     puts "#{row} ==>> Should be deleted #{count}"
-      #     count = 0
-      # end
     end
-
 
     STDERR.puts "=== #delete_extra_headers ran ===\n\n"
   end

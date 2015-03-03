@@ -47,9 +47,11 @@ years = (2002..2014)
 #   rec.delete_rank
 # end
 
-pass = Parser.new('passing', 2013)
-rush = Parser.new('rushing', 2013)
-rec = Parser.new('receiving', 2013)
-[pass].each do |position|
-  position.delete_extra_headers
+years.each_with_index do |yr, i|
+  pass = Parser.new('passing', yr)
+  rush = Parser.new('rushing', yr)
+  rec = Parser.new('receiving', yr)
+  [pass, rush, rec].each do |position|
+    position.delete_extra_headers
+  end
 end
