@@ -116,14 +116,17 @@ class Parser
     STDERR.puts "=== #delete_extra_headers ran ===\n\n"
   end
 
-  def csv_to_json
-    directory = './json_hold'
-    File.open("./json_hold/#{@year}_#{@position}.json", "w") do |file|
-      CSV.foreach("./csv_hold/clean/#{@year}_#{@position}.csv") do |row|
-        file.write(row.to_json)
+  def print_stats
+    CSV.foreach("./csv_hold/clean/#{@year}_#{@position}.csv") do |row|
+      row.each_with_index do |item, idx|
+        if idx < row.length - 1
+          print "#{item}\t"
+        elsif idx == row.length - 1
+            print "#{item}\n"
+        end
       end
     end
-    STDERR.puts "=== #csv_to_json ran ===\n\n"
+    STDERR.puts "=== #print_stats ran ===\n\n"
   end
 
 end  # End of Parser class
