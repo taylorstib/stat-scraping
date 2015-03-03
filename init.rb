@@ -38,12 +38,18 @@ years = (2002..2014)
 #   rec.write_to_csv
 # end
 
-years.each_with_index do |yr, i|
-  pass = Parser.new('passing', yr)
-  pass.del_dups
-  rush = Parser.new('rushing', yr)
-  rush.del_dups
-  rec = Parser.new('receiving', yr)
-  rec.del_dups
-end
+# years.each_with_index do |yr, i|
+#   pass = Parser.new('passing', yr)
+#   pass.delete_rank
+#   rush = Parser.new('rushing', yr)
+#   rush.delete_rank
+#   rec = Parser.new('receiving', yr)
+#   rec.delete_rank
+# end
 
+pass = Parser.new('passing', 2013)
+rush = Parser.new('rushing', 2013)
+rec = Parser.new('receiving', 2013)
+[pass].each do |position|
+  position.delete_extra_headers
+end

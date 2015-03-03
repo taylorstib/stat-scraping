@@ -30,8 +30,8 @@ class Parser
     puts "=== #open_pages ran ===\n\n"
   end
 
-# Makes sure the row_length variable is set to the proper number so the page can be parsed
-# correctly for each position
+  # Makes sure the row_length variable is set to the proper number so the page can be parsed
+  # correctly for each position
   def row_length
     case @position
     when 'passing'
@@ -73,8 +73,8 @@ class Parser
     STDERR.puts "=== #write_to_csv ran ===\n\n"
   end
 
-  # Deletes the duplicate values that are found every 10 rows
-  def del_dups
+  # Deletes the first column for ranking. Unnecessary in the final product
+  def delete_rank
     row_length
     row_array = []
     CSV.open("./csv_hold/#{@year}/#{@position}_clean.csv", 'w') do |csv| 
@@ -91,8 +91,34 @@ class Parser
         end
       end
     end
-      STDERR.puts "=== #del_dups ran ===\n\n"
+      STDERR.puts "=== #delete_rank ran ===\n\n"
   end
 
+  # Deletes the extra header labels that originally appear every 10 rows
+  def delete_extra_headers
+    count = 0
+    CSV.foreach("./csv_hold/#{@year}/#{@position}_clean.csv") do |row|
+      if ((row[0] == "PLAYER") && (count > 0))
+        puts "#{row} ==> should delete #{count}"
+        count = count + 1
+      elsif row[0] == "PLAYER"
+        count += 1
+        puts "#{row}"
+      else
+        puts "#{row}"
+      end
+
+      # if count < 11 && initial_set == 0
+      #   puts "#{row} -->> #{count}"
+      #   count += 1
+      # elsif count == 11 && initial_set == 0
+      #     puts "#{row} ==>> Should be deleted #{count}"
+      #     count = 0
+      # end
+    end
+
+
+    STDERR.puts "=== #delete_extra_headers ran ===\n\n"
+  end
 
 end  # End of Parser class
