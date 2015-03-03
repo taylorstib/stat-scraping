@@ -2,6 +2,7 @@ require 'rubygems'
 require 'nokogiri'
 require 'fileutils'
 require 'csv'
+require 'json'
 require_relative './count_gen.rb'
 
 # Object responsible for grabbing the HTML pages out of the local file storage, 
@@ -112,8 +113,17 @@ class Parser
         end
       end
     end
-
     STDERR.puts "=== #delete_extra_headers ran ===\n\n"
+  end
+
+  def csv_to_json
+    directory = './json_hold'
+    File.open("./json_hold/#{@year}_#{@position}.json", "w") do |file|
+      CSV.foreach("./csv_hold/clean/#{@year}_#{@position}.csv") do |row|
+        file.write(row.to_json)
+      end
+    end
+    STDERR.puts "=== #csv_to_json ran ===\n\n"
   end
 
 end  # End of Parser class
