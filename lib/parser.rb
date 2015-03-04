@@ -12,10 +12,10 @@ class Parser
   attr_accessor :position, :year, :pages, :array_of_count, :row_length 
 
   def initialize(position='passing', year='2014')
-    @position = position.to_s
-    @year = year.to_s
-    @pages = []
-    @array_of_count = []
+    @position        = position.to_s
+    @year            = year.to_s
+    @pages           = []
+    @array_of_count  = []
   end
 
   # Checks to see if the file exists, then opens it and appends the file to the @pages variable
@@ -116,17 +116,19 @@ class Parser
     STDERR.puts "=== #delete_extra_headers ran ===\n\n"
   end
 
-  def print_stats
+  def print_stats(listings=10)
     CSV.foreach("./csv_hold/clean/#{@year}_#{@position}.csv") do |row|
       row.each_with_index do |item, idx|
-        if idx < row.length - 1
+        if idx == 0
+          print "#{item}" + " "*(30 - item.length)
+        elsif idx < row.length - 1
           print "#{item}\t"
         elsif idx == row.length - 1
-            print "#{item}\n"
+          print "#{item}\n"
         end
       end
     end
-    STDERR.puts "=== #print_stats ran ===\n\n"
+    STDERR.puts "\n=== #print_stats ran ===\n\n"
   end
 
 end  # End of Parser class
