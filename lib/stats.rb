@@ -14,9 +14,7 @@ class Stats
   # Helper functions
 
   def print_header
-    puts "*****************************************************"
-    puts "**** Printing stats for #{@position} in #{@year} ****"
-    puts "*****************************************************"
+    puts "\n              **** Printing stats for #{@position} in #{@year} ****\n\n"
     CSV.foreach("./csv_hold/clean/#{@year}_#{@position}.csv") do |row|
       if row[0].match("PLAYER")
         row.each_with_index do |item, idx|
@@ -79,10 +77,28 @@ class Stats
   def display_stat_gt(stat, number)
     print_header
     CSV.foreach("./csv_hold/clean/#{@year}_#{@position}.csv") do |row|
-      if row[3].to_i > number
+      if row[stat].split(',').join('').to_f > number
         row.each_with_index do |item, idx|
           print_nice_rows(row, item, idx)
         end
+      end
+    end
+  end
+
+  # displays the top (n) listings based on most yards [for now]
+  def display_listings
+    print_header
+    count = 0
+    CSV.foreach("./csv_hold/clean/#{@year}_#{@position}.csv") do |row|
+      if count == 0
+        count += 1
+      elsif count < @listings
+        row.each_with_index do |item, idx|
+          print_nice_rows(row, item, idx)
+        end
+          count += 1
+      else
+        break
       end
     end
   end

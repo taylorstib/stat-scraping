@@ -1,5 +1,6 @@
 require_relative './lib/scraper.rb'
 require_relative './lib/parser.rb'
+require_relative './lib/stats.rb'
 
 years = (2002..2014)
 
@@ -57,12 +58,22 @@ years = (2002..2014)
 # end
 
 # years.each_with_index do |yr, i|
-  pass = Parser.new('passing', 2013)
+  # pass = Parser.new('passing', 2013)
   # rush = Parser.new('rushing', 2013)
   # rec = Parser.new('receiving', 2013)
-  [pass].each do |position|
-    position.csv_to_json
-  end
+  # [pass].each do |position|
+  #   position.print_stats
+  # end
 # end
 
-
+# years.each do |yr|
+  # stat = Stats.new('passing', yr)
+  stat = Stats.new('passing', 2005)
+  # stat.print_header
+  # stat.display_all
+  # stat.display_player('on')
+  stat.display_per_team('gb')
+  # stat.display_stat_gt(1, 450)
+  # stat2 = Stats.new('rushing', 2008, 30)
+  # stat2.display_listings
+# end
