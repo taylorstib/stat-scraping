@@ -74,7 +74,10 @@ years = (2002..2014)
   # stat.display_player('Tomlinson')
   # stat.display_per_team('gb')
   # stat.display_stat_gt(1, 450)
-  stat2 = Stats.new('rushing', 2009, 5)
-  stat2.display_listings
+  stat2 = Stats.new('passing', 2009, 5)
+  # stat2.display_listings
   # stat.get_headers
+  stat2.get_headers
+  puts stat2.header_hash
+  stat2.display_stat_gt("RATE", 100)
 # end

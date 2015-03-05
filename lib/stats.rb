@@ -4,12 +4,13 @@ require 'fileutils'
 require 'csv'
 
 class Stats
-  attr_accessor :position, :year, :listings, :headers
+  attr_accessor :position, :year, :listings, :headers, :header_hash
   def initialize(position, year, listings=15)
      @position = position
      @year     = year
      @listings = listings
      @headers  = []
+     @header_hash = {}
   end 
 
   ##########################
@@ -27,6 +28,9 @@ class Stats
       else
         break
       end
+    end
+    @headers.each_with_index do |name, index|
+      @header_hash[name] = index
     end
   end
 
@@ -98,7 +102,7 @@ class Stats
   def display_stat_gt(stat, number)
     print_header
     CSV.foreach("./csv_hold/clean/#{@year}_#{@position}.csv") do |row|
-      if row[stat].split(',').join('').to_f > number
+      if row[header_hash[stat]].split(',').join('').to_f > number
         row.each_with_index do |item, idx|
           print_nice_rows(row, item, idx)
         end
