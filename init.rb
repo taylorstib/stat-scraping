@@ -66,7 +66,7 @@ years = (2002..2014)
   # end
 # end
 
-years.each do |yr|
+# years.each do |yr|
   # stat = Stats.new('passing', yr)
   # stat = Stats.new('rushing', yr, 5)
   # stat.print_header
@@ -74,7 +74,7 @@ years.each do |yr|
   # stat.display_player('Tomlinson')
   # stat.display_per_team('gb')
   # stat.display_stat_gt(1, 450)
-  stat2 = Stats.new('rushing', yr, 5)
+  stat2 = Stats.new('rushing', 2009, 5)
   stat2.display_listings
   # stat.get_headers
-end
+# end

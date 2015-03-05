@@ -32,10 +32,10 @@ class Stats
 
   def print_header
     get_headers unless @headers.any?
-    heading = " Printing stats for #{@position} in #{@year} "
+    heading = " #{@year} #{@position.capitalize} Stats "
     heading_len = 140 - heading.length
     puts '*'*140
-    puts ('='*(heading_len / 2)) + heading + ('='*(heading_len / 2)) + "\n"
+    puts (' '*(heading_len / 2)) + heading + (' '*(heading_len / 2)) + "\n"
     puts '*'*140 + "\n"
     puts "-"*140
     @headers.each_with_index do |item, idx|
