@@ -111,6 +111,19 @@ class Stats
     print_ending
   end
 
+# Display only if given stat is less than provided number
+  def display_stat_lt(stat, number)
+    print_header
+    CSV.foreach("./csv_hold/clean/#{@year}_#{@position}.csv") do |row|
+      if row[header_hash[stat]].split(',').join('').to_f < number
+        row.each_with_index do |item, idx|
+          print_nice_rows(row, item, idx)
+        end
+      end
+    end
+    print_ending
+  end
+
   # displays the top (n) listings based on most yards [for now]
   def display_listings
     print_header
